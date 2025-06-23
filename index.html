@@ -8,12 +8,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div id="scanner-cursor"></div>
+
   <header>
     <div class="logo">
       <a href="index.html">
@@ -21,28 +24,181 @@
       </a>
     </div>
     <nav class="navbar">
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">//Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact_</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact<span class="cursor_subSection">_</span></a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar top-bar"></span>
+        <span class="bar middle-bar"></span>
+        <span class="bar bottom-bar"></span>
+      </div>
     </nav>
+
+    <!--HERO-->
     <div class="hero">
       <div class="hero-content">
         <h1>DANKO GOLUZA <br><span class="h1-span glitch" data-text=" //Web Design_">//Web Design<span
               class="cursor">_</span></span></h1>
-        <a href="#projects" class="hud-button">Enter Interface</a>
+        <a href="#about" class="hud-button glitch-effect hero-btn">Enter Interface</a>
       </div><!--hero-content-->
     </div><!--hero-->
-    <div class="sub-section1">
-      <h1>//Not Only Pixels. Systems_</h1>
-    </div><!--sub-section1-->
   </header>
 
+  <div class="sub-section1">
+    <h1 class="sub-h1">//Not Only Pixels. Systems<span class="cursor_subSection">_</span></h1>
+  </div><!--sub-section1-->
+
+  <div class="about" id="about">
+    <div class="row">
+      <div class="about-left">
+        <h2 class="h2-span">//About Me<span class="cursorWhite">_</span></h2><br>
+        <a href="pages/about.html" class="hud-button glitch-effect">Check More</a>
+      </div><!--about-left-->
+
+      <div class="about-right">
+        <h2><span class="h1-span">// Web Designer | Sci-Fi Enthusiast <span class="cursor">_</span></span></h2>
+        <p class="about-text">
+          I’m Danko — a web designer and creator of immersive digital experiences.
+          Inspired by space, signal, and interface — this site is a portal into my skills, mindset, and vision.
+          <br><br>
+          <em>Want to know how I build from the void? Check more<span class="cursorWhite">_</span></em>
+        </p>
+      </div><!--about-right-->
+    </div><!--row-->
+  </div><!--about-->
+
+  <!--PROJECTS-->
+  <div class="sub-section1">
+    <h1 class="sub-h1">//[ HTML ] [ CSS ] [ JavaScript ] [ Figma ] [ VS Code ] [ GitHub ]<span
+        class="cursor_subSection">_</span></h1>
+  </div><!--sub-section1-->
+  <div class="projects" id="projects">
+    <h2><span class="h1-span">//PROJECTS<span class="cursor">_</span></span></h2>
+    <p>This is where the work lives — crafted in the quiet hours, fueled by coffee, curiosity, and a
+      vision for better
+      digital spaces.
+      Designs, code, experiments... all archived here for exploration.
+      Some are complete missions. Others, still orbiting.
+      Access granted — take a look.</p>
+    <a href="pages/projects.html" class="hud-button glitch-effect projects-btn">Check More</a>
+
+  </div>
+  <!--PROJECTS END-->
+
+  <div class="data-terminal">
+    <div class="terminal-header">// LOG FEED ACTIVE</div>
+    <ul class="log-output" id="log-output">
+      <li>LOG COMPLETE_</li>
+      <li>System: Danko Goluza //Web Design_</li>
+      <li>> 🛰️ Currently orbiting: Dublin, Earth_</li>
+      <li>> Mission: Web Design & Development</li>
+      <li>> Visual Systems: HTML, CSS, JS, Figma </li>
+      <li>> Engine: Hand-coded in VS Code </li>
+      <li>> Powered by Coffee & Space Dreams ☕🚀 </li>
+      <li> >Mission Control: GitHub </li>
+      <li>> Interface closed at 18:02 UTC — Sector 23-A (Earth)</li>
+    </ul>
+  </div>
+
+  <div class="sub-section1">
+    <h1 class="sub-h1">//Each line of code is a signal — a construct from nothing, turning void into function, thought
+      into form<span class="cursor_subSection">_</span></h1>
+  </div><!--sub-section1-->
+
+  <div class="blog" id="blog">
+    <div class="row">
+      <div class="blog-left">
+        <h2><span class="h1-span blogSpan">//Dev Feed<span class="cursor">_</span></span></h2>
+        <p class="about-text">
+          More than code. More than pixels.  This log collects reflections, experiments, and system thoughts — from
+          design dilemmas to dev epiphanies, from personal growth to productivity hacks.<br>
+          Access granted for explorers, builders, and curious minds.
+      </div><!--blog-left-->
+      <div class="blog-right">
+        <h2 class="h2-span">//Blog<span class="cursorWhite">_</span></h2><br>
+        <a href="pages/blog.html" class="hud-button glitch-effect">Check More</a>
+      </div><!--blog-right-->
+    </div><!--row-->
+  </div><!--blog-->
+
+  <!--CONTACT-->
+  <div class="sub-section1">
+    <h1 class="sub-h1">You’ve seen the work. You’ve read the logs.
+      Now, if you’re ready to collaborate —
+      the comms channel is open<span class="cursor_subSection">_</span></h1>
+  </div><!--sub-section1-->
+
+  <div class="contact" id="contact">
+    <div class="row">
+      <h2><span class="h1-span contact-h2">//Communication Uplink<span class="cursor">_</span></span></h2>
+
+      <div class="data-terminal contact-data-terminal">
+        <div class="terminal-header">//TRANSMISSION READY<span class="cursor">_</span></div>
+        <form class="contact-form" action="mailto:your@email.com" method="POST">
+          <div class="form-group">
+            <label for="name">// Name<span class="cursor">_</span></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your callsign">
+          </div>
+
+          <div class="form-group">
+            <label for="email">// Email<span class="cursor">_</span></label>
+            <input type="email" id="email" name="email" required placeholder="Transmitting address">
+          </div>
+
+          <div class="form-group">
+            <label for="message">// Your Message<span class="cursor">_</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Log your inquiry here..."></textarea>
+          </div>
+
+          <button type="submit" class="hud-button glitch-effect">//SEND<span class="cursor">_</span></button>
+        </form>
+      </div>
+
+    </div><!--contact-row-->
+  </div><!--contact-->
+  <!--CONTACT END-->
+
+  <!--FOOTER-->
+
+  <div class="sub-section1">
+    <h1 class="sub-h1">//Follow me on: [GitHub]_ [Linkdin]_ [Insta]<span class="cursor_subSection">_</span></h1>
+  </div><!--sub-section1-->
+
+  <div class="footer">
+    <span class="h1-span glitch" data-text=" //You’ve made it to the end... but this isn’t the last
+      signal_">//You’ve made it to the end... but this isn’t the last
+      signal<span class="cursor">_</span>
+      </h2>
+
+  </div><!--footer-->
+
+  <button id="backToTop" class="hud-button back-to-top glitch-effect">//↑<span class="cursor">_</span></button>
+
+
+  <footer class="site-footer">
+    <p>// CONNECTION TERMINATED_</p>
+    <p class="blink">Awaiting next log...</p>
+  </footer>
+
+  <div class="footer-links">
+    <ul>
+      <li>© 2025</li>
+      <li>Danko Goluza //Webdesign_</li>
+      <li>//All Rights Reserved_</li>
+    </ul>
+  </div>
+  <!--FOOTER END-->
 
   <script src="js/main.js" async defer></script>
+  <script>
+
+  </script>
+
+
 </body>
 
 </html>
