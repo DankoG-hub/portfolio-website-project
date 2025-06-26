@@ -467,7 +467,6 @@ nav li{
 .blog .row{
   display: flex;
   flex-direction: row;
-  min-height: ;
 }
 .blog-right {
   flex: 1;
@@ -639,6 +638,112 @@ background-image: url(../assets/images/commander2.png);
 .back-to-top:hover {
   transform: scale(1.05);
 }
+/* FOOTER END */
 
 
-/* FOOTER */
+
+/*** ABOUT PAGE ***/
+#about2 {
+  scroll-margin-top: 100px; /* adjust based on your header height */
+}
+.about-hero {
+  background-image: url(../assets/images/aboutMe.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0; /* fine, but only useful if width is limited */
+}
+
+.about2 .row{
+   display: flex;
+  flex-direction: row;
+}
+.about2-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about2-left {
+  flex: 1;
+  background-image: url(../assets/images/contact-pannel.png);
+  background-size: cover;
+  background-position: center;
+  display: column;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 60px;
+  color: #e6e6e6;
+}
+.about2 h2{
+  color: #e6e6e6;}
+.about2-right {
+  flex: 1;
+  color: #e6e6e6;
+  padding: 60px;
+  background-color: rgba(10, 10, 10, 0.85);
+}
+.ul-span{
+  color: #FF7E1B;
+}
+
+#mission {
+  scroll-margin-top: 100px; /* adjust based on your header height */
+}
+.mission {
+  background-image: url(../assets/images/hangar.png);
+  background-size: cover;
+  background-position: center;
+  display: column;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  color: #e6e6e6;
+  line-height: 1.9;
+}
+
+#vision {
+  scroll-margin-top: 100px; /* adjust based on your header height */
+}
+.vision {
+  background-color: rgba(10, 10, 10, 0.85);
+  background-size: cover;
+  background-position: center;
+  display: column;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  color: #e6e6e6;
+  line-height: 1.9;
+}
+.features .fBox{
+  flex-wrap: wrap;
+}
+.features .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.fBox{
+  background-color: #00FFFF;
+  text-align: center;
+  width: 33%;
+  align-items: flex-end;
+  padding: 10px;
+}
+/*** ABOUT PAGE END ***/

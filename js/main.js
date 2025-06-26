@@ -1,3 +1,6 @@
+
+console.log("main.js loaded");
+
 const buttons = document.querySelectorAll('.glitch-effect');
 
     buttons.forEach(button => {

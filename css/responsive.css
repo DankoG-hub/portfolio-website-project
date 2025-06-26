@@ -69,6 +69,7 @@
   }
 
   .nav-links {
+    transition: all 0.3s ease-in-out;
     display: none;
     flex-direction: column;
     position: absolute;
