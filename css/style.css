@@ -4,7 +4,7 @@
 html {
   scroll-behavior: smooth;
 }
-
+/*#00ffff*/
 body{
   margin: 0;
   padding: 0;
@@ -400,21 +400,22 @@ nav li{
   background-color: #111820;
   margin: 10% auto;
   padding: 40px;
-  border: 1px solid #00ffff;
+  border: 1px solid #FF7E1B;
   width: 80%;
   max-width: 700px;
   border-radius: 12px;
   color: #e6e6e6;
   font-family: 'Audiowide', sans-serif;
   position: relative;
-  box-shadow: 0 0 10px #00ffff;
+  box-shadow: 0 0 10px color: #FF7E1B;
+;
 }
 
 .close {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: #00ffff;
+  color: #FF7E1B;
   font-size: 30px;
   cursor: pointer;
 }

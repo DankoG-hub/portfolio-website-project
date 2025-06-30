@@ -1,5 +1,195 @@
 /* responsive.css */
 
+@media (max-width: 576px) {
+  body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .hamburger{
+    margin-top: -17px;
+  }
+  
+  .nav-links.active {
+    margin-top: -30px;
+    background-color: rgba(10, 10, 10, 0.85);
+  }
+  .homeLink1 a{
+    color: #ff7e1b!important;
+  }
+  .nav-links a{
+     color: #e6e6e6;
+  }
+  .hero{
+    background-position: left!important;
+  }
+  .hero h1 { 
+    font-size: 2.2rem ; 
+  }
+
+.row {
+  flex-direction: column;
+}
+
+  p { font-size: 1.95rem; 
+  }
+.hud-button {
+  padding: 12px 20px;
+  font-size: 0.9rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.background-glow { display: none; }
+
+.sub-h1 {
+  font-size: 18px
+}
+
+/*ABOUT*/
+.about-left{
+  width: 100%;
+  text-align: center;
+}
+.about-right {
+  width: 100%;
+  text-align: center;
+  padding: 20px!important;
+  text-align: left;
+}
+
+/*ABOUT END*/
+
+.projects {
+  justify-content: center;
+  padding: 20px!important;
+}
+.projects p{
+  text-align: center;
+  font-size: 1rem;
+  max-width: 100%;
+  text-align: left;
+}
+
+/*BLOG*/
+.blog .row {
+    flex-direction: column;
+  }
+  .blog-left{
+    padding: 20px!important;
+    text-align: left;  
+}
+  .blog-left, .blog-right {
+    width: 100%;
+  }
+
+/*BLOG*/
+
+.data-terminal{
+  max-width: 80%;
+}
+
+.contact-form {
+  max-width: 80%;
+  box-sizing: border-box;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+
+}
+.footer .h1-span{
+  margin-top: -330px;
+}
+.site-footer p{
+  font-size: 14px;
+}
+.footer-links{
+  text-align: center;
+}
+
+/* ABOUT ME PAGE*/
+.about-hero {
+  background-position: center!important;
+}
+.about-hero h1{
+  font-size: 2.2rem;
+}
+/* ABOUT ME PAGE END*/
+
+.fBox{
+  max-width: 80%;
+  max-height: 150px;
+}
+.fBox p{
+  font-size: 14px;
+  margin-top: -10px;
+}
+.personal .sub-h1{
+  font-size: 18px;
+}
+.personal .row {
+    flex-wrap: wrap;
+  }
+.personal .personal1{
+  text-align: left;
+}
+  .personal .personal1,
+  .personal .personal2 {
+    width: 100%;
+    /*padding: 20px!important;*/
+  }
+
+.mission {
+  padding: 20px !important;
+  text-align: left!important;
+}
+.mission p{
+  font-size: 1rem;
+  max-width: 100%;
+}
+.vision {
+  padding: 20px !important;
+  text-align: left!important;
+}
+.vision p{
+  font-size: 1rem;
+  max-width: 100%;
+}
+.timeline{
+  padding: 0 !important;
+}
+.timeline-header{
+  padding: 20px;
+}
+.timeline-item1{
+  width: 100%!important;
+}
+.timeline p{
+  font-size: 14px!important;
+}
+.timeline-content{
+  width: 100%;
+}
+.transmissionBtn{
+  margin: 0 auto!important;
+  width: 280px!important;
+  padding: 10px 20px!important;
+  
+}
+.transmission-cta p{
+  font-size: 14px!important;
+}
+
+}
+
+
+
+
+
+
 /* Tablets and up */
 @media screen and (max-width: 1024px) {
   .hero h1 {
@@ -23,7 +213,7 @@
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: ;
   }
 }
 
