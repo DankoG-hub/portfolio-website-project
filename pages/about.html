@@ -116,7 +116,17 @@
           aesthetics and
           functionality,
           ensuring that every project I undertake is not only visually appealing but also user-friendly.</p>
-        <a href="#identity" class="hud-button glitch-effect hero-btn aboutBtn">//Log: Personal Insight</a>
+        <a href="#" id="openModal" class="hud-button glitch-effect hero-btn aboutBtn">//Log: Personal Insight<span
+            class="cursor">_</span></a>
+        <div id="personalModal" class="modal">
+          <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>//Personal Log <span class="cursor">_</span></h2>
+            <p>This is your insight zone — reflections, growth, thoughts… all logged here for explorers like you.</p>
+          </div>
+        </div>
+
+        <!--MODAL ABOUT ME-->
       </div>
     </div>
   </div><!--about2-->
@@ -207,6 +217,8 @@
 
   <!--FEATURES END-->
 
+  <button id="backToTop" class="hud-button back-to-top glitch-effect">//↑<span class="cursor">_</span></button>
+
   <footer class="site-footer">
     <p>// CONNECTION TERMINATED_</p>
     <p class="blink">Awaiting next log...</p>
@@ -221,7 +233,83 @@
   </div>
   <!--FOOTER END-->
 
-  <script src="../js/main.js" async defer></script>
+  <script src="..js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("Inline JS works!");
+
+      const burger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      if (burger && navLinks) {
+        burger.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+          console.log("Hamburger clicked!");
+        });
+      }
+    });
+  </script>
+
+  <!--BACK TO TOP BTN-->
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      const scrollTrigger = window.innerHeight / 3;
+      if (window.scrollY > scrollTrigger) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+
+  <script>
+    const openModal = document.getElementById("openModal");
+    const modal = document.getElementById("personalModal");
+    const closeModal = document.getElementById("closeModal");
+
+    openModal.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevents scrolling to top
+      modal.style.display = "block";
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+
+  <script>
+    const buttons = document.querySelectorAll('.glitch-effect');
+
+    buttons.forEach(button => {
+      const triggerGlitch = () => {
+        button.classList.add('triggered');
+        setTimeout(() => button.classList.remove('triggered'), 500);
+      };
+
+      button.addEventListener('mouseenter', triggerGlitch);
+      button.addEventListener('click', triggerGlitch);
+    });
+
+  </script>
+
+
 
 </body>
 

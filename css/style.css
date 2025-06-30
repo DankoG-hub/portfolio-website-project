@@ -211,6 +211,9 @@ nav li{
   100% { clip: rect(0, 9999px, 0, 0); transform: translate(0, 0); }
 }
 
+/*GLITCH UPDATE*/
+
+
 .cursor {
   color: #FF7E1B; /* or inherit */
   animation: blinkCursor 1.1s steps(2) infinite;
@@ -378,6 +381,46 @@ nav li{
   line-height: 1.9;
 }
 /* ABOUT END */
+
+/* MODAL POPUP */
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 14, 22, 0.95);
+  backdrop-filter: blur(8px);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #111820;
+  margin: 10% auto;
+  padding: 40px;
+  border: 1px solid #00ffff;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  color: #e6e6e6;
+  font-family: 'Audiowide', sans-serif;
+  position: relative;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #00ffff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+/* MODAL POPUP END */
 
 /* PROJECTS */
 #projects {
@@ -640,6 +683,8 @@ background-image: url(../assets/images/commander2.png);
 .back-to-top:hover {
   transform: scale(1.05);
 }
+
+
 /* FOOTER END */
 
 
@@ -872,4 +917,7 @@ margin: 0 auto;
   width: 350px;
   margin:20px
 }
+
+
+
 /*** ABOUT PAGE END ***/

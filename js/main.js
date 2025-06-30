@@ -1,5 +1,5 @@
 
-console.log("main.js loaded");
+console.log("main.js is working!");
 
 const buttons = document.querySelectorAll('.glitch-effect');
 
@@ -72,6 +72,8 @@ backToTopBtn.addEventListener("click", () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
   });
+
+//MODAL POPUP
 
 
 
