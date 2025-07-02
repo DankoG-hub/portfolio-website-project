@@ -922,3 +922,22 @@ margin: 0 auto;
 
 
 /*** ABOUT PAGE END ***/
+
+/*  PROJECTS  */
+
+.projects-hero {
+  background-image: url(../assets/images/hangar-bay3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0; /* fine, but only useful if width is limited */
+}
+
+/*  PROJECTS END  */
