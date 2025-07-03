@@ -952,7 +952,7 @@ margin: 0 auto;
   background-size: cover;
   object-fit: cover;
   background-position: center;
-  height: 100vh;
+  
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -974,7 +974,10 @@ margin: 0 auto;
   text-align: center;
   align-items: center;
 }
-
+.project-intro{
+  margin-bottom: 80px;
+  color: #e6e6e6;
+}
 .project-hud-container {
   display: flex;
   flex-wrap: wrap;
