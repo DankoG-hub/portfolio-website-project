@@ -1045,4 +1045,19 @@ margin: 0 auto;
   color: #FF4444;
 }
 
+.creative-labs{
+  background-color: #111!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 /*  PROJECTS END  */
