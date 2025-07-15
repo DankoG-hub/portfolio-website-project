@@ -1045,8 +1045,8 @@ margin: 0 auto;
   color: #FF4444;
 }
 
-.creative-labs{
-  background-color: #111!important;
+
+.creative-labs {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -1059,5 +1059,24 @@ margin: 0 auto;
   margin: 0;
   padding: 0;
 }
+.creative-hud-container {
+  background-color: #111!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+   padding: 80px 20px;
+   width: 100%;
+}
+.creative-labsP{
+  
+}
+
 
 /*  PROJECTS END  */
