@@ -1049,34 +1049,37 @@ margin: 0 auto;
 .creative-labs {
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(10, 10, 10, 0.85);
   object-fit: cover;
   background-position: center;
   overflow: hidden;
   display: flex;
+  flex-direction: column; /* change this */
   align-items: center;
   justify-content: center;
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 60px 20px;
 }
+
+.creative-intro {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
 .creative-hud-container {
-  background-color: #111!important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
-  background-position: center;
-  overflow: hidden;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  position: relative;
-  
-   padding: 80px 20px;
-   width: 100%;
-}
-.creative-labsP{
+  align-items: stretch;
+  width: 100%;
   
 }
+
 
 
 /*  PROJECTS END  */
