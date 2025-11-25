@@ -75,6 +75,32 @@ backToTopBtn.addEventListener("click", () => {
 
 //MODAL POPUP
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const engageBtn = document.querySelector('.engage-btn');
+    const glitchOverlay = document.getElementById('screenGlitch');
+    const targetId = '#about'; // where you want to go after glitch
+
+    if (!engageBtn || !glitchOverlay) return;
+
+    engageBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // stop instant jump to #about
+
+      // activate glitch
+      glitchOverlay.classList.add('active');
+
+      // after ~900ms, remove glitch + scroll to section
+      setTimeout(() => {
+        glitchOverlay.classList.remove('active');
+
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 950); // match glitch-fade duration
+    });
+  });
+
+
 
 
 

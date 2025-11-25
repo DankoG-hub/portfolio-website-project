@@ -4,15 +4,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
+
+  <title>Goluza Interface Studio — Web Design </title>
+
+  <meta name="description"
+    content="Goluza Interface Studio — Sci-Fi inspired web design, interfaces, and immersive digital experiences by Danko Goluza.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Danko Goluza">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/Logo/phoenix-logo.png">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
   <div id="scanner-cursor"></div>
@@ -20,10 +36,13 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="./assets/images/logo5.png" alt="Danko Goluzas Logo">
+        <img src="./assets/images/Logo/logo-orange.png" alt="Danko Goluzas Logo">
       </a>
     </div>
     <nav class="navbar">
+      <span class="nav-tech-layer"></span>
+      <span class="mid-notch"></span>
+
       <ul class="nav-links" id="navLinks">
         <li class="homeLink1"><a href="index.html">//Home</a></li>
         <li><a href="#about">About</a></li>
@@ -41,9 +60,9 @@
     <!--HERO-->
     <div class="hero">
       <div class="hero-content">
-        <h1 class="heroH1">DANKO GOLUZA <br><span class="h1-span glitch" data-text=" //Web Design_">//Web Design<span
-              class="cursor">_</span></span></h1>
-        <a href="#about" class="hud-button glitch-effect hero-btn">Enter Interface</a>
+        <h1 class="heroH1">GOLUZA INTERFACE STUDIO<br><span class="h1-span glitch" data-text=" //Web Design_">//Web
+            Design<span class="cursor">_</span></span></h1>
+        <a href="#about" class="hud-button glitch-effect hero-btn engage-btn">ENGAGE</a>
       </div><!--hero-content-->
     </div><!--hero-->
   </header>
@@ -51,34 +70,187 @@
 
   <!--ABOUT-->
   <div class="sub-section1">
+    <span class="hud-dot left"></span> <!-- optional -->
     <h1 class="sub-h1">//Not Only Pixels. Systems<span class="cursor_subSection">_</span></h1>
+    <span class="hud-dot right"></span> <!-- optional -->
   </div><!--sub-section1-->
+
 
   <div class="about" id="about">
     <div class="row">
       <div class="about-left">
         <h2 class="h2-span">//About Me<span class="cursorWhite">_</span></h2><br>
-        <a href="pages/about.html" class="hud-button glitch-effect">Check More</a>
+        <a href="pages/about.html" class="hud-button glitch-effect hero-btn">Check More</a>
       </div><!--about-left-->
 
-      <div class="about-right">
-        <h2><span class="h1-span">// Web Designer | Sci-Fi Enthusiast <span class="cursor">_</span></span></h2>
+      <div class="about-right hud-panel">
+        <div class="hud-panel-header">
+          <span class="">// MAIN CONSOLE_</span>
+          <span class="hud-status">Channel: About</span>
+        </div>
+
+        <h2 class="about-heading">
+          <span class="h1-span">Web Designer | Sci-Fi Enthusiast <span class="cursor"></span></span>
+        </h2>
+
         <p class="about-text">
-          I’m Danko — a web designer and creator of immersive digital experiences.
+          I’m Danko — a web designer and creator of immersive digital experiences.<br>
           Inspired by space, signal, and interface — this site is a portal into my skills, mindset, and vision.
-          <br><br>
+        </p>
+
+        <p class="about-text about-emphasis">
           <em>Want to know how I build from the void? Check more<span class="cursorWhite">_</span></em>
         </p>
       </div><!--about-right-->
+
     </div><!--row-->
   </div><!--about-->
   <!--ABOUT END-->
 
   <!--PROJECTS-->
-  <div class="sub-section1">
-    <h1 class="sub-h1">//[ HTML ] [ CSS ] [ JavaScript ] [ Figma ] [ VS Code ] [ GitHub ]<span
-        class="cursor_subSection">_</span></h1>
-  </div><!--sub-section1-->
+
+  <!-- <div class="sub-section1">
+    <span class="hud-dot left"></span> 
+    <h1 class="sub-h1">//System Integrity. Precision_<span class="cursor_subSection">_</span></h1>
+    <span class="hud-dot right"></span> 
+  </div>-->
+
+  <!-- SUB-SECTION: SERVICES LABEL (optional) -->
+  <div class="sub-section1 sub-section-services">
+    <h1 class="sub-h1">//Systems & Services<span class="cursor_subSection">_</span></h1>
+  </div>
+  <!-- SUB-SECTION END -->
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="services-inner">
+
+      <div class="services-header">
+        <span class="services-tag">//SERVICE MATRIX_</span>
+        <p class="services-intro">
+          Focused, modular offerings — built to plug directly into your stack.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Web Design -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//01</span>
+            <h3 class="service-title">Web Design</h3>
+          </div>
+          <p class="service-text">
+            Custom, hand-coded front-end with sci-fi flavor, clean structure, and
+            responsive layouts ready for real-world users.
+          </p>
+          <ul class="service-list">
+            <li>Custom layouts, no templates</li>
+            <li>Responsive & mobile-first</li>
+            <li>Performance-minded builds</li>
+            <li>Deployment & basic hosting setup</li>
+          </ul>
+        </article>
+
+        <!-- 2. UX Design -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//02</span>
+            <h3 class="service-title">UX Design</h3>
+          </div>
+          <p class="service-text">
+            Interfaces that feel smooth, readable, and intuitive — not just “cool”.
+          </p>
+          <ul class="service-list">
+            <li>User flows & basic journey mapping</li>
+            <li>Wireframes & interaction concepts</li>
+            <li>Content hierarchy & readability</li>
+            <li>Usability-first thinking in every page</li>
+          </ul>
+        </article>
+
+        <!-- 3. SEO Foundations -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//03</span>
+            <h3 class="service-title">SEO Foundations</h3>
+          </div>
+          <p class="service-text">
+            Solid technical basics so your site can actually be found.
+          </p>
+          <ul class="service-list">
+            <li>Clean semantic HTML structure</li>
+            <li>Meta titles & descriptions</li>
+            <li>Alt text & accessibility basics</li>
+            <li>Performance tweaks that help ranking</li>
+          </ul>
+        </article>
+
+        <!-- 4. Branding & Visual Systems -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//04</span>
+            <h3 class="service-title">Branding & Systems</h3>
+          </div>
+          <p class="service-text">
+            From logo to layout rules — a small but coherent system behind your visuals.
+          </p>
+          <ul class="service-list">
+            <li>Logo & mark concepts</li>
+            <li>Color & typography system</li>
+            <li>Basic brand usage rules</li>
+            <li>Visual direction for future assets</li>
+          </ul>
+        </article>
+
+        <!-- 5. AI Assistant Integration -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//05</span>
+            <h3 class="service-title">AI Assistants</h3>
+          </div>
+          <p class="service-text">
+            Guided, on-brand chat experiences that help visitors find what they need.
+          </p>
+          <ul class="service-list">
+            <li>Conversation flow planning</li>
+            <li>FAQ & content mapping</li>
+            <li>Integration of an assistant into the site</li>
+            <li>Tone aligned with the client’s brand</li>
+          </ul>
+        </article>
+
+        <!-- 6. addition -->
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-label">//06</span>
+            <h3 class="service-title">Mapping & Strategy</h3>
+          </div>
+          <p class="service-text">
+            High-clarity sessions where we explore your goals, decode your ideas,
+            and translate them into a focused digital direction.
+          </p>
+          <ul class="service-list">
+            <li>1:1 guided brainstorming</li>
+            <li>Clarifying goals, message & target users</li>
+            <li>Turning abstract ideas into structured steps</li>
+            <li>Creative exploration & story shaping</li>
+            <li>UX direction & early concept sketching</li>
+            <li>Strategic motivation & alignment</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="services-cta">
+        <a href="#contact" class="hud-button glitch-effect engage-btn">
+          Configure Your Project
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- SERVICES END -->
+
+
   <div class="projects" id="projects">
     <h2><span class="h1-span">//PROJECTS<span class="cursor">_</span></span></h2>
     <p>This is where the work lives — crafted in the quiet hours, fueled by coffee, curiosity, and a
@@ -91,7 +263,7 @@
   </div>
   <!--PROJECTS END-->
 
-  <div class="data-terminal">
+  <!--<div class="data-terminal">
     <div class="terminal-header">// LOG FEED ACTIVE</div>
     <ul class="log-output" id="log-output">
       <li>LOG COMPLETE_</li>
@@ -104,22 +276,23 @@
       <li> >Mission Control: GitHub </li>
       <li>> Interface closed at 18:02 UTC — Sector 23-A (Earth)</li>
     </ul>
-  </div>
+  </div>-->
 
-  <!--<div class="sub-section1">
+  <div class="sub-section1">
     <h1 class="sub-h1">//Each line of code is a signal — a construct from nothing, turning void into function, thought
       into form<span class="cursor_subSection">_</span></h1>
-  </div>sub-section1-->
+  </div>
 
   <!--BLOG-->
   <div class="blog" id="blog">
     <div class="row">
-      <div class="blog-left">
+      <div class="blog-left hud-panel">
         <h2><span class="h1-span blogSpan">//Dev Feed<span class="cursor">_</span></span></h2>
         <p class="about-text">
-          More than code. More than pixels. This log collects reflections, experiments, and system thoughts — from
+          More than code. More than pixels.<br>
+          This log collects reflections, experiments, and system thoughts — from
           design dilemmas to dev epiphanies, from personal growth to productivity hacks.<br>
-          Access granted for explorers, builders, and curious minds.
+          Access granted for explorers, builders, and curious minds.</p>
       </div><!--blog-left-->
       <div class="blog-right">
         <h2 class="h2-span">//Blog<span class="cursorWhite">_</span></h2><br>
@@ -187,16 +360,32 @@
     <p class="blink">Awaiting next log...</p>
   </footer>
 
+  <!-- LEGAL LINKS ROW -->
+  <div class="legal-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="imprint.html">Imprint</a>
+  </div>
+
   <div class="footer-links">
     <ul>
       <li>© 2025</li>
-      <li>Danko Goluza //Webdesign_</li>
+      <li>Goluza Interface Studio_</li>
       <li>//All Rights Reserved_</li>
     </ul>
   </div>
   <!--FOOTER END-->
 
   <script src="js/main.js" async defer></script>
+
+  <!-- Fullscreen glitch overlay -->
+  <div class="screen-glitch" id="screenGlitch">
+    <div class="glitch-layer layer1"></div>
+    <div class="glitch-layer layer2"></div>
+    <div class="glitch-layer layer3"></div>
+  </div>
+
 
 </body>
 

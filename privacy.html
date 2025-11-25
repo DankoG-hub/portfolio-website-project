@@ -1,0 +1,286 @@
+<style>
+  body {
+    background-image: url(./assets/images/body-bg2.png);
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    padding: 20px;
+
+  }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | Goluza Interface Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts (if not already global) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lexend:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/legal.css"> <!-- new file for this layout -->
+</head>
+
+<body class="legal-body">
+
+  <div class="legal-overlay">
+    <main class="legal-panel">
+      <div class="legal-panel-header">
+        <span class="legal-tag">// LEGAL CONSOLE_</span>
+        <span class="legal-status">Status: Nominal</span>
+      </div>
+
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-meta">Last updated: 21 November 2025</p>
+
+      <div class="legal-content">
+        <p>
+          This Privacy Policy explains how <strong>Goluza Interface Studio</strong> (“we”, “us”, “our”)
+          collects, uses, and protects your personal data when you interact with this website.
+        </p>
+
+        <!-- You’ll paste your actual policy sections here -->
+        <h2>1. Who We Are</h2>
+        <p>
+          Goluza Interface Studio is a web design studio operated by Danko Goluza,
+          registered business name No. 775378, based in Dublin, Ireland.
+        </p>
+
+        <h2>2. Data We Collect</h2>
+        <p>
+          Examples: contact form details, analytics data, email communication…
+        </p>
+
+        <!-- etc… -->
+      </div>
+
+      <div class="legal-footer-bar">
+        <a href="index.html" class="hud-button legal-back-btn engage-btn">
+          // Return to Main Console_
+        </a>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
+
+<style>
+  /* Full-page background (you already have the circuit bg image) */
+  .legal-body {
+    min-height: 100vh;
+    margin: 0;
+    background: #05070b url("../assets/images/body-circuit-bg.png") center/cover fixed no-repeat;
+    font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e5e5e5;
+  }
+
+  /* Centering the HUD panel */
+  .legal-overlay {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  /* MAIN HUD PANEL */
+  .legal-panel {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(7, 10, 15, 0.95);
+    border: 1px solid rgba(255, 126, 27, 0.7);
+    border-radius: 10px;
+    padding: 28px 32px 32px;
+    box-shadow:
+      0 0 30px rgba(0, 0, 0, 0.8),
+      0 0 18px rgba(255, 126, 27, 0.35);
+    overflow: hidden;
+  }
+
+  /* faint HUD grid / noise */
+  .legal-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  /* angular corner accents */
+  .legal-panel::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(255, 126, 27, 0.4);
+    clip-path: polygon(6% 0, 94% 0,
+        100% 10%, 100% 90%,
+        94% 100%, 6% 100%,
+        0 90%, 0 10%);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* LITTLE nodes / dots */
+  .legal-panel-header::before,
+  .legal-panel-header::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 126, 27, 0.9);
+    box-shadow: 0 0 10px rgba(255, 126, 27, 0.9);
+  }
+
+  .legal-panel-header::before {
+    left: 18px;
+  }
+
+  .legal-panel-header::after {
+    right: 18px;
+  }
+
+  /* HEADER LINE */
+  .legal-panel-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Audiowide", system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 126, 27, 0.4);
+  }
+
+  .legal-tag {
+    color: #ff7e1b;
+  }
+
+  .legal-status {
+    color: #8f95a5;
+    font-size: 10px;
+  }
+
+  /* TITLES & TEXT */
+  .legal-title {
+    font-family: "Audiowide", system-ui, sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 10px 0 4px;
+  }
+
+  .legal-meta {
+    font-size: 12px;
+    color: #aeb3c4;
+    margin-bottom: 18px;
+  }
+
+  .legal-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d7d9e2;
+    max-height: calc(100vh - 260px);
+    /* scroll if it gets long */
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  /* scrollbar small + subtle */
+  .legal-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .legal-content::-webkit-scrollbar-track {
+    background: rgba(15, 20, 26, 0.8);
+  }
+
+  .legal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 126, 27, 0.85);
+  }
+
+  /* headings inside legal text */
+  .legal-content h2 {
+    font-family: "Audiowide", system-ui, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffae4a;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: 14px;
+  }
+
+  /* FOOTER CTA */
+  .legal-footer-bar {
+    margin-top: 22px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 126, 27, 0.35);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .legal-back-btn {
+    font-size: 12px;
+    padding: 10px 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* if hud-button isn’t global, quick fallback */
+  .hud-button {
+    display: inline-block;
+    border: 1px solid #ff7e1b;
+    color: #ff7e1b;
+    background: transparent;
+    padding: 10px 20px;
+    font-family: "Audiowide", system-ui, sans-serif;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+
+  .hud-button:hover {
+    background: #ff7e1b;
+    color: #05070b;
+    box-shadow: 0 0 15px rgba(255, 126, 27, 0.8);
+  }
+
+  /* responsive tweaks */
+  @media (max-width: 768px) {
+    .legal-panel {
+      padding: 20px 18px 22px;
+    }
+
+    .legal-title {
+      font-size: 20px;
+    }
+
+    .legal-content {
+      max-height: none;
+    }
+  }
+</style>
