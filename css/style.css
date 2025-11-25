@@ -262,6 +262,7 @@ nav li{
    margin: 0;
   font-size: 2.2rem;
   line-height: 0.8; /* Optional: adjust as needed */
+  animation: hudFlicker 4s infinite steps(2, start);
 }
 .h1-span{
   color:#FF7E1B;
@@ -1321,15 +1322,49 @@ nav li{
 
 /*CONTACT*/
 #contact {
-  scroll-margin-top: 100px; /* adjust based on your header height */
+  position: relative;
+  background: rgba(5, 10, 15, 0.96);
+  padding: 0px 0;
+  border-top: 1px solid rgba(255, 126, 27, 0.25);
+  border-bottom: 1px solid rgba(255, 126, 27, 0.25);
+  overflow: hidden;
 }
+/* GRID FRAME */
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgba(255, 126, 27, 0.15);
+  pointer-events: none;
+  opacity: 0.6;
+  background-image:
+    linear-gradient(transparent 95%, rgba(255, 126, 27, 0.06) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 126, 27, 0.06) 96%);
+  background-size: 85px 85px;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+/* Ensure content sits above grid */
+#contact .row,
+#contact .contact-intro-actions,
+#contact .contact-data-terminal,
+#contact .contact-form {
+  position: relative;
+  z-index: 2;
+}
+
+
 .contact .row{
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: rgba(10, 10, 10, 0.85);
+ 
   color: #e6e6e6;
+  
+  padding: 0px 20px 60px;
+  border-top: 1px solid rgba(255,126,27,0.35);
 }
 
 .contact h2{
@@ -1337,6 +1372,97 @@ nav li{
   text-align: center;
   margin-top: 70px;
 }
+
+.contact-h2 {
+  animation: hudFlicker 4s infinite steps(2, start);
+}
+
+@keyframes hudFlicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 0.85; }
+  99% { opacity: 0.6; }
+}
+
+
+.contact-intro {
+  max-width: 520px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: lexend, system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #cfd3dc;
+}
+.uplink-modes {
+  margin-top: 10px;
+  display: inline-flex;
+  gap: 1.5rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 126, 27, 0.5);
+  background: radial-gradient(circle at top, rgba(255,126,27,.2), rgba(5,5,5,.9));
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.uplink-modes .mode {
+  opacity: 0.55;
+}
+
+.uplink-modes .mode.active {
+  color: #ff7e1b;
+  opacity: 1;
+}
+
+.contact-meta {
+  margin-top: 18px;
+  font-family: "Lexend", system-ui;
+  font-size: 0.75rem;
+  color: #a6a6a6;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.contact-meta span + span {
+  margin-left: 1.5rem;
+}
+
+.contact-meta.small {
+  margin-top: 8px;
+  font-size: 0.68rem;
+  opacity: 0.7;
+}
+
+.contact-meta a {
+  color: #ff7e1b;
+  text-decoration: none;
+}
+.contact-meta a:hover {
+  text-decoration: underline;
+}
+
+.contact-subtext{
+  font-family: lexend, system-ui, sans-serif;
+  margin-top: 30px;
+}
+.contact-privacy {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Lexend", system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: #8f95a3;
+}
+
+.contact-privacy a {
+  color: #ff7e1b;
+  text-decoration: none;
+}
+.contact-privacy a:hover {
+  text-decoration: underline;
+}
+
 .contact-data-terminal{
   margin-top: 30px;
 }
@@ -1380,6 +1506,16 @@ nav li{
   border-color: #ffaa33;
   box-shadow: 0 0 15px rgba(255, 126, 27, 0.6);
 }
+
+.form-group textarea {
+  background: repeating-linear-gradient(
+    0deg,
+    #0d0d0d 0px,
+    #0d0d0d 28px,
+    rgba(255,126,27,0.05) 29px
+  );
+}
+
 
 .contact-form {
   animation: bootIn 1.2s ease-in-out;

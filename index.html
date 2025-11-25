@@ -257,7 +257,7 @@
       vision for better
       digital spaces.
       Designs, code, experiments... all archived here for exploration.
-      Some are complete missions. Others, still orbiting.
+      Some are complete missions. Others, still orbiting.<br>
       Access granted — take a look.</p>
     <a href="pages/projects.html" class="hud-button glitch-effect projects-btn">Check More</a>
   </div>
@@ -314,9 +314,26 @@
     <div class="row">
       <h2><span class="h1-span contact-h2">//Communication Uplink<span class="cursor">_</span></span></h2>
 
+      <p class="contact-intro">
+        Brief me on your project, idea, or problem. <br>I usually respond within 24–48 hours.</p>
+
+      <!-- <div class="uplink-modes">
+        <span class="mode active">// Live Uplink: Call</span>
+        <span class="mode">// Text Transmission</span>
+      </div>-->
+
+      <div class="contact-intro-actions">
+        <a href="#" class="hud-button glitch-effect engage-btn" data-cal-link="goluza-interface-studio/20min"
+          data-cal-namespace="20min" data-cal-config='{"layout":"month_view"}'>
+          //BOOK UPLINK SESSION
+        </a>
+
+        <p class="contact-subtext">Prefer text transmission? Continue below:</p>
+      </div>
+
       <div class="data-terminal contact-data-terminal">
         <div class="terminal-header">//TRANSMISSION READY<span class="cursor">_</span></div>
-        <form class="contact-form" action="mailto:your@email.com" method="POST">
+        <form class="contact-form" action="mailto:info@dankogoluza.com" method="POST">
           <div class="form-group">
             <label for="name">// Name<span class="cursor">_</span></label>
             <input type="text" id="name" name="name" required placeholder="Enter your callsign">
@@ -335,6 +352,16 @@
           <button type="submit" class="hud-button glitch-effect">//SEND<span class="cursor">_</span></button>
         </form>
       </div><!--data terminal contact form-->
+
+      <p class="contact-meta">
+        <span>// Location: Dublin, Ireland</span>
+        <span>// Direct Channel: <a href="mailto:info@dankogoluza.com">info@dankogoluza.com</a></span>
+      </p>
+      <p class="contact-meta small">
+        By sending this transmission you agree that your data will be used to respond to your inquiry.
+        See <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+
     </div><!--contact-row-->
   </div><!--contact-->
   <!--CONTACT END-->
@@ -385,6 +412,55 @@
     <div class="glitch-layer layer2"></div>
     <div class="glitch-layer layer3"></div>
   </div>
+
+
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    // init namespace "20min"
+    Cal("init", "20min", { origin: "https://app.cal.com" });
+
+    // UI options for that namespace
+    Cal.ns["20min"]("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  </script>
+  <!-- Cal element-click embed code ends -->
+  <script>
+    document.querySelectorAll('[data-cal-link]').forEach((el) => {
+      el.addEventListener('click', function (e) {
+        e.preventDefault(); // stop normal link navigation
+      });
+    });
+  </script>
+
 
 
 </body>
