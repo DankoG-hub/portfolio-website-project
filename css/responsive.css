@@ -295,3 +295,42 @@ img {
   }
 }
 /* ABOUT END*/
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* all mobile fixes */
+  .logo img {
+    max-width: 160px;           /* shrink logo a bit on mobile */
+    height: auto;
+  }
+   .navbar {
+    padding: 10px 16px;
+     border-bottom: #111;
+  }
+  .navbar::after {
+    bottom: 42px;
+  }
+  .nav-tech-layer {
+    bottom: 25px;
+    display: none;
+  }
+  .hamburger{
+    top: 40px;
+  }
+  .hero-content{
+    margin-top: 30px;
+  }
+  .glitch{
+    top: 25px;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  /* tablet adjustments */
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1400px) {
+  /* large display improvements */
+}
