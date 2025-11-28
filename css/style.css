@@ -1649,9 +1649,14 @@ background-image: url(../assets/images/commander2.png);
   justify-content: center;
   padding: 60px;
   color: #e6e6e6;
+  font-family: 'Lexend Giga', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
 }
 .about2 h2{
-  color: #e6e6e6;}
+  color: #e6e6e6;
+  font-family: 'Audiowide', sans-serif;
+}
 .about2-right {
   flex: 1;
   color: #e6e6e6;
