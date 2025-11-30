@@ -1982,6 +1982,346 @@ margin: 0 auto;
 }
 
 
+/* ========== SERVICE SOLAR SYSTEM ========== */
+
+.service-orbit-section {
+  padding: 80px 40px;
+  background:
+    radial-gradient(circle at top, rgba(255, 126, 27, 0.04), transparent 60%),
+    rgba(5, 10, 15, 0.97);
+  border-top: 1px solid rgba(255, 126, 27, 0.35);
+  border-bottom: 1px solid rgba(255, 126, 27, 0.35);
+}
+
+.service-orbit-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HUD grid overlay */
+.service-orbit-inner::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 126, 27, 0.18);
+  pointer-events: none;
+  opacity: 0.7;
+  background-image:
+    linear-gradient(transparent 95%, rgba(255, 126, 27, 0.07) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 126, 27, 0.07) 96%);
+  background-size: 80px 80px;
+  mix-blend-mode: screen;
+}
+
+/* HEADER */
+
+.service-orbit-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-orbit-tag {
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ff7e1b;
+}
+
+.service-orbit-intro {
+  margin: 10px auto 0;
+  max-width: 520px;
+  color: #e6e6e6;
+  font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 0.95rem;
+}
+
+/* SOLAR MAP CONTAINER */
+
+.service-orbit-map {
+  position: relative;
+  margin: 0 auto;
+  width: min(640px, 100%);
+  aspect-ratio: 1 / 1;
+  transition:
+    transform 0.8s ease-out,
+    box-shadow 0.8s ease-out;
+}
+
+/* hover on the section that wraps the map */
+.service-orbit:hover .service-orbit-map {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.75);
+}
+
+.service-orbit-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(transparent 95%, rgba(255, 126, 27, 0.06) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 126, 27, 0.06) 96%);
+  background-size: 80px 80px;
+  opacity: 0.45;
+  mix-blend-mode: screen;
+  z-index: 0;
+  animation: grid-drift 40s linear infinite;
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: -120px 80px; }
+}
+
+
+/* SUN */
+
+.orbit-sun {
+  position: absolute;
+   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.orbit-sun-core {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #ffcf7a, #ff7e1b 55%, #c44808 100%);
+  box-shadow:
+    0 0 30px rgba(255, 126, 27, 0.9),
+    0 0 60px rgba(255, 126, 27, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.orbit-sun-label {
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #0b0f16;
+  padding: 0 8px;
+}
+
+/* ORBIT RINGS */
+
+.orbit {
+  position: absolute;
+  inset: 50%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 126, 27, 0.35);
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* planets themselves stay clickable */
+}
+
+.orbit-scan-sector {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 470px;          /* match .orbit-6 */
+  height: 470px;         /* match .orbit-6 */
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    conic-gradient(
+      from -30deg,
+      rgba(120, 255, 180, 0.22) 0deg,
+      rgba(120, 255, 180, 0.32) 60deg,
+      transparent 60deg,
+      transparent 360deg
+    );
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+.orbit-scan-sector::after {
+ content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border-right: 1px solid rgba(160, 255, 210, 0.55);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  opacity: 0.8;
+  animation: orbit-scan-line 3.6s linear infinite;
+}
+
+@keyframes orbit-scan-line {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* orbit sizes (inner → outer) */
+.orbit-1 { width: 170px; height: 170px; }
+.orbit-2 { width: 230px; height: 230px; }
+.orbit-3 { width: 290px; height: 290px; }
+.orbit-4 { width: 350px; height: 350px; }
+.orbit-5 { width: 410px; height: 410px; }
+.orbit-6 { width: 470px; height: 470px; }
+
+.orbit-label-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* PLANETS */
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%; /* start at right side of orbit */
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-size: 160% 160%;
+  background-position: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  pointer-events: auto;
+}
+
+.planet .planet-label {
+  display: none;
+}
+
+/* slight size variations */
+.planet-1 { width: 22px; height: 22px; }
+.planet-2 { width: 24px; height: 24px; }
+.planet-3 { width: 26px; height: 26px; }
+.planet-4 { width: 28px; height: 28px; }
+.planet-5 { width: 30px; height: 30px; }
+.planet-6 { width: 32px; height: 32px; }
+
+/* planet color palettes – muted, earth-ish, on-theme */
+.planet-1 { background-image: radial-gradient(circle at 30% 20%, #f2f5ff, #4f6fb3 55%, #1b2740); }
+.planet-2 { background-image: radial-gradient(circle at 30% 20%, #ffe9c7, #c98a3a 55%, #593215); }
+.planet-3 { background-image: radial-gradient(circle at 30% 20%, #e9fff1, #4da479 55%, #133326); }
+.planet-4 { background-image: radial-gradient(circle at 30% 20%, #f6edf7, #a864c2 55%, #3d224f); }
+.planet-5 { background-image: radial-gradient(circle at 30% 20%, #f2f2f2, #9ea3aa 55%, #26292f); }
+.planet-6 { background-image: radial-gradient(circle at 30% 20%, #fff8df, #d3a64a 55%, #4b3515); }
+
+/* LABELS */
+
+.planet-label {
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #f5f5f5;
+  background: rgba(6, 10, 16, 0.95);
+  border: 1px solid rgba(255, 126, 27, 0.6);
+  padding: 4px 8px;
+  margin-left: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  position: relative;
+  transform: translateX(4px);
+}
+
+.planet-label-floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-9999px, -9999px); /* offscreen before JS runs */
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 4px 8px;
+  background: rgba(6, 12, 18, 0.92);
+  border: 1px solid rgba(120, 255, 180, 0.7);
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.85),
+    0 0 18px rgba(80, 255, 190, 0.35);
+  color: #f5fdfb;
+  opacity: 0;
+  filter: blur(0.4px);
+  transition:
+    opacity 0.25s ease-out,
+    transform 0.25s ease-out,
+    filter 0.25s ease-out;
+}
+
+/* When planet enters scan zone */
+.planet-label-floating.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* ROTATION ANIMATIONS
+   We rotate the whole orbit; planet + label orbit together.
+*/
+
+.orbit-1 { animation: orbit-spin 18s linear infinite; }
+.orbit-2 { animation: orbit-spin 24s linear infinite; }
+.orbit-3 { animation: orbit-spin 30s linear infinite; }
+.orbit-4 { animation: orbit-spin 36s linear infinite; }
+.orbit-5 { animation: orbit-spin 44s linear infinite; }
+.orbit-6 { animation: orbit-spin 52s linear infinite; }
+
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* hover: subtle glow */
+.planet:hover {
+  box-shadow:
+    0 0 14px rgba(255, 126, 27, 0.7),
+    0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+/* RESPONSIVE TWEAKS */
+
+@media (max-width: 900px) {
+  .service-orbit-section {
+    padding: 60px 20px;
+  }
+  .service-orbit-inner::before {
+    inset: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-orbit-intro {
+    font-size: 0.88rem;
+  }
+  .orbit-sun-core {
+    width: 100px;
+    height: 100px;
+  }
+  .orbit-1 { width: 150px; height: 150px; }
+  .orbit-2 { width: 200px; height: 200px; }
+  .orbit-3 { width: 250px; height: 250px; }
+  .orbit-4 { width: 300px; height: 300px; }
+  .orbit-5 { width: 350px; height: 350px; }
+  .orbit-6 { width: 400px; height: 400px; }
+
+  .planet-label {
+    font-size: 0.55rem;
+    padding: 3px 6px;
+  }
+}
+
+
 .timeline{
   /*background-color: rgba(10, 10, 10, 0.85);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),

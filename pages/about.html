@@ -76,10 +76,11 @@
         <h2><span class="h2-span">//Identity Panel<span class="cursorWhite">_</span></span></h2>
         <ul class="about2-ul">
           <li><span class="ul-span">Name_ <br></span> Danko Goluža</li><br>
-          <li><span class="ul-span">Role_ <br></span> Web Designer · Front-End Developer · UX/UI Designer</li><br>
+          <li><span class="ul-span">Role_ <br></span> Web Designer · Front-End Developer · UX/UI Designer </li><br>
           <li><span class="ul-span">Location_ <br></span> Dublin, Earth</li><br>
-          <li><span class="ul-span">Specialties_ <br></span> Interface Design · UX/UI Systems · Front-End Engineering ·
-            Digital Aesthetics</li><br>
+          <li><span class="ul-span">Specialties_ <br></span> Interface Design · UX/UI Systems · <br>Front-End
+            Development
+            ·<br>Web Design · Digital Aesthetics</li><br>
           <li><span class="ul-span">Traits_ <br></span>Focused · Detail-Oriented · Resilient · Structured Thinker</li>
         </ul>
       </div>
@@ -248,6 +249,79 @@
     </div><!--core-values-inner-->
   </section>
   <!-- CORE VALUES END -->
+
+
+  <!-- SERVICE SOLAR SYSTEM -->
+  <section class="service-orbit-section">
+    <div class="service-orbit-inner">
+      <header class="service-orbit-header">
+        <span class="service-orbit-tag">//Service Orbit_</span>
+        <p class="service-orbit-intro">
+          A visual map of the systems I work with — each planet represents a core service
+          orbiting the main hub.
+        </p>
+      </header>
+
+      <div class="service-orbit-map">
+
+        <!-- SCAN SECTOR OVERLAY -->
+        <div class="orbit-scan-sector"></div>
+
+        <!-- SUN / CORE -->
+        <div class="orbit-sun">
+          <div class="orbit-sun-core">
+            <span class="orbit-sun-label">Goluza Interface Studio</span>
+          </div>
+        </div>
+
+        <!-- ORBITS + PLANETS -->
+        <!-- 1: Web Design -->
+        <div class="orbit orbit-1">
+          <button class="planet planet-1" data-service="web-design">
+            <span class="planet-label">Web Design</span>
+          </button>
+        </div>
+
+        <!-- 2: UX Design -->
+        <div class="orbit orbit-2">
+          <button class="planet planet-2" data-service="ux-design">
+            <span class="planet-label">UX UI Design</span>
+          </button>
+        </div>
+
+        <!-- 3: SEO Foundations -->
+        <div class="orbit orbit-3">
+          <button class="planet planet-3" data-service="seo">
+            <span class="planet-label">SEO Optimization</span>
+          </button>
+        </div>
+
+        <!-- 4: Branding & Systems -->
+        <div class="orbit orbit-4">
+          <button class="planet planet-4" data-service="branding">
+            <span class="planet-label">Branding & Systems</span>
+          </button>
+        </div>
+
+        <!-- 5: AI Assistants -->
+        <div class="orbit orbit-5">
+          <button class="planet planet-5" data-service="ai-assistants">
+            <span class="planet-label">AI Assistant</span>
+          </button>
+        </div>
+
+        <!-- 6: Mapping & Strategy -->
+        <div class="orbit orbit-6">
+          <button class="planet planet-6" data-service="mapping">
+            <span class="planet-label">Mapping & Strategy</span>
+          </button>
+        </div>
+        <div class="orbit-label-layer"></div>
+      </div>
+    </div>
+  </section>
+  <!-- SERVICE SOLAR SYSTEM END -->
+
 
 
   <!--MISSION-->
@@ -426,6 +500,88 @@
     });
 
   </script>
+
+  <script>
+    // Planets + radar labels
+    document.addEventListener("DOMContentLoaded", () => {
+      const map = document.querySelector(".service-orbit-map");
+      if (!map) return;
+
+      const planets = Array.from(map.querySelectorAll(".planet"));
+      const labelLayer = map.querySelector(".orbit-label-layer");
+
+      if (!planets.length || !labelLayer) return;
+
+      // Create floating labels based on the existing planet-label spans
+      const planetData = planets.map((planet) => {
+        const originalLabel = planet.querySelector(".planet-label");
+        const text = originalLabel ? originalLabel.textContent.trim() : "";
+
+        const floatLabel = document.createElement("div");
+        floatLabel.className = "planet-label-floating";
+        floatLabel.textContent = text || "//Service";
+
+        labelLayer.appendChild(floatLabel);
+
+        return { planet, floatLabel };
+      });
+
+      // ---- RADAR SECTOR SETTINGS ----
+      // 0°  = right, 90° = up, -90° = down
+      const SECTOR_CENTER = 90;        // center of green wedge (top)
+      const SECTOR_HALF_ANGLE = 35;    // half width of the wedge
+
+      function tick() {
+        // Recompute map rect + center every frame so scrolling doesn't break it
+        const mapRect = map.getBoundingClientRect();
+        const cx = mapRect.left + mapRect.width / 2;
+        const cy = mapRect.top + mapRect.height / 2;
+
+        planetData.forEach(({ planet, floatLabel }) => {
+          const pRect = planet.getBoundingClientRect();
+          const px = pRect.left + pRect.width / 2;
+          const py = pRect.top + pRect.height / 2;
+
+          // Vector from center to planet
+          const dx = px - cx;
+          const dy = cy - py; // invert Y so "up" is positive
+
+          // Angle in degrees, -180..180
+          const angleRad = Math.atan2(dy, dx);
+          let angleDeg = angleRad * (180 / Math.PI);
+
+          // Difference between planet angle and radar center, normalized
+          let diff = angleDeg - SECTOR_CENTER;
+          if (diff > 180) diff -= 360;
+          if (diff < -180) diff += 360;
+
+          const insideSector = Math.abs(diff) <= SECTOR_HALF_ANGLE;
+
+          if (insideSector) {
+            floatLabel.classList.add("visible");
+          } else {
+            floatLabel.classList.remove("visible");
+          }
+
+          // Position label: upper-left side of the planet
+          const labelRect = floatLabel.getBoundingClientRect();
+          const labelWidth = labelRect.width || 70;
+          const labelHeight = labelRect.height || 22;
+
+          const localX = px - mapRect.left - labelWidth * 0.75;  // left of planet
+          const localY = py - mapRect.top - labelHeight * 1.3;   // above planet
+
+          floatLabel.style.transform = `translate(${localX}px, ${localY}px)`;
+        });
+
+        requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    });
+  </script>
+
+
 
 
 
