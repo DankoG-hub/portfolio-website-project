@@ -208,7 +208,6 @@ img {
   font-size: 14px!important;
 }
 
-}
 
 @media (min-width:576px) and (max-width:768px) {
   .hero-content {
@@ -367,6 +366,70 @@ img {
     width: 100%;
   }  
 
+  #about2 .row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Left identity panel full width */
+  #about2 .about2-left {
+    width: 100%;
+    padding: 24px 18px;
+    text-align: left!important;
+  }
+
+  /* Right text panel full width */
+  #about2 .about2-right {
+    width: 100%;
+    padding: 28px 18px 32px;
+    text-align: center;
+  }
+
+  /* Headings a bit smaller so they don’t break weirdly */
+  #about2 .about2-left h2,
+  #about2 .about2-right h2 {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  /* Identity list: tighter line-height & font size */
+  #about2 .about2-ul {
+    margin: 16px 0 0;
+    padding: 0;
+  }
+
+  #about2 .about2-ul li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #about2 .about2-ul .ul-span {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 0.92rem;
+  }
+
+  /* Paragraphs on the right: easier to read on small screens */
+  #about2 .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* Personal log button – full-width-ish on mobile */
+  #about2 .aboutBtn {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 260px;
+    margin-top: 20px;
+  }
+
+  .mission, .vision {
+    text-align: center!important;
+    padding: 20px !important;
+  }
 
 }
 

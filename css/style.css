@@ -4,6 +4,10 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /*#00ffff*/
 body{
   margin: 0;
@@ -1644,14 +1648,14 @@ background-image: url(../assets/images/commander2.png);
   background-position: center;
   display: column;
   flex-direction: column;
-  text-align: left;
+  text-align: center!important;
   align-items: flex-end;
   justify-content: center;
   padding: 60px;
   color: #e6e6e6;
   font-family: 'Lexend Giga', sans-serif;
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: 1.5;
 }
 .about2 h2{
   color: #e6e6e6;
@@ -1662,14 +1666,18 @@ background-image: url(../assets/images/commander2.png);
   color: #e6e6e6;
   padding: 60px;
   background-color: rgba(10, 10, 10, 0.85);
+  text-align: left;
 }
-.about2 .aboutBtn{
+.about2-right .aboutBtn{
 margin: 0 auto;
+margin-top: 55px;
 }
 .ul-span{
   color: #FF7E1B;
 }
 
+
+/**Mission Section**/
 #mission {
   scroll-margin-top: 100px; /* adjust based on your header height */
 }
@@ -1702,7 +1710,7 @@ margin: 0 auto;
   padding: 60px;
   color: #e6e6e6;
   line-height: 1.9;
-    clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%);
+    /*clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%);*/
 
 }
 .features {
@@ -2146,13 +2154,13 @@ margin: 0 auto;
 .orbit-scan-sector::after {
  content: "";
   position: absolute;
-  inset: 12%;
+  inset: 0%;
   border-radius: 50%;
   border-right: 1px solid rgba(160, 255, 210, 0.55);
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: orbit-scan-line 3.6s linear infinite;
 }
 
@@ -2303,6 +2311,7 @@ margin: 0 auto;
 @media (max-width: 600px) {
   .service-orbit-intro {
     font-size: 0.88rem;
+    padding: 20px;
   }
   .orbit-sun-core {
     width: 100px;
@@ -2317,6 +2326,19 @@ margin: 0 auto;
 
   .planet-label {
     font-size: 0.55rem;
+    padding: 3px 6px;
+  }
+  .orbit-scan-sector {
+    width: 400px;
+    height: 400px;
+  }
+
+  .orbit-scan-sector::after {
+    inset: 1%;
+  }
+
+  .planet-label-floating {
+    font-size: 0.52rem;
     padding: 3px 6px;
   }
 }
