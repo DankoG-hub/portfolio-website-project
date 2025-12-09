@@ -169,7 +169,6 @@ img {
 
 .mission {
   padding: 20px !important;
-  text-align: left!important;
 }
 .mission p{
   font-size: 1rem;
@@ -177,7 +176,6 @@ img {
 }
 .vision {
   padding: 20px !important;
-  text-align: left!important;
 }
 .vision p{
   font-size: 1rem;
@@ -375,14 +373,13 @@ img {
   /* Left identity panel full width */
   #about2 .about2-left {
     width: 100%;
-    padding: 24px 18px;
     text-align: left!important;
   }
 
-  /* Right text panel full width */
+  /* Right text panel full width     padding: 28px 18px 32px;
+ */
   #about2 .about2-right {
     width: 100%;
-    padding: 28px 18px 32px;
     text-align: center;
   }
 
@@ -396,7 +393,6 @@ img {
   /* Identity list: tighter line-height & font size */
   #about2 .about2-ul {
     margin: 16px 0 0;
-    padding: 0;
   }
 
   #about2 .about2-ul li {
@@ -414,7 +410,8 @@ img {
   #about2 .about-text {
     font-size: 0.95rem;
     line-height: 1.6;
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   /* Personal log button – full-width-ish on mobile */
@@ -427,10 +424,16 @@ img {
   }
 
   .mission, .vision {
-    text-align: center!important;
-    padding: 20px !important;
+    text-align: center;
+    padding: 20px ;
   }
 
+  .mission .about-text{
+    width: 80%;
+  }
+  .vision .about-text{
+    width: 80%;
+  }
 }
 
 @media (min-width:768px) and (max-width:960px) {
@@ -445,9 +448,11 @@ img {
 @media (max-width:960px) {
     .navbar ul {
     display: ;
+    
   }
-   .nav-links.active {
+    .nav-links.active {
     display: flex;
+    height: 100vh;
   }
 
   .nav-links li {
