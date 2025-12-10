@@ -2500,3 +2500,437 @@ margin-top: 55px;
   color: #ff7e1b;
   text-shadow: 0 0 6px rgba(255,125,0,0.6);
 }
+
+
+/* ========= Goluza Interface Studio – Chat UI ========= */
+
+:root {
+  --gis-bg: #050609;
+  --gis-panel: #0b0d12;
+  --gis-panel-light: #121520;
+  --gis-border: #2c323f;
+  --gis-accent: #ff8a3d;
+  --gis-accent-soft: rgba(255, 138, 61, 0.35);
+  --gis-text-main: #f5f5f7;
+  --gis-text-muted: #9ca3b8;
+  --gis-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+  --gis-radius-lg: 18px;
+  --gis-radius-full: 999px;
+  --gis-transition-fast: 0.18s ease-out;
+}
+
+/* ===== Chat bubble (phoenix button) ===== */
+
+.gis-chat-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9990;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.gis-chat-toggle:focus-visible {
+  outline: 2px solid var(--gis-accent);
+  outline-offset: 4px;
+}
+
+.gis-chat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  bottom: 75px;
+  background: radial-gradient(circle at 30% 20%, #ffb86b, #ff8a3d 55%, #2b1710 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--gis-shadow);
+  position: relative;
+  transition: transform var(--gis-transition-fast), box-shadow var(--gis-transition-fast);
+}
+
+/* Phoenix in chat bubble – make it black for contrast */
+.gis-chat-icon img,
+.gis-chat-mini-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: brightness(0) contrast(1.4); /* makes it solid black */
+  opacity: 0.9;
+}
+
+.gis-chat-toggle:hover .gis-chat-icon,
+.gis-chat-toggle:focus-visible .gis-chat-icon {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
+}
+
+/* Container stays as is, this just makes sure it's the orbit center */
+.gis-chat-icon {
+  position: relative;
+  overflow: visible; /* allow orbits to be visible outside */
+  background: radial-gradient(circle at 30% 20%, #ffb86b, #f37a28 40%, #3a1e10 100%);
+}
+
+/* Orbits */
+.gis-orbit {
+  position: absolute;
+  inset: -8px;               /* orbit slightly outside the sphere */
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 138, 61, 0.4);
+  pointer-events: none;
+  animation: gis-orbit-rotate 7.5s linear infinite;
+}
+
+/* Second orbit - different angle / speed for atomic feel */
+.gis-orbit-2 {
+  inset: -14px;
+  border-style: solid;
+  border-color: rgba(255, 138, 61, 0.2);
+  transform: rotate(25deg);
+  animation-duration: 11s;
+}
+
+/* Satellite (small glowing dot) */
+.gis-satellite {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffefe0;
+  box-shadow:
+    0 0 6px rgba(255, 190, 120, 0.9),
+    0 0 16px rgba(255, 138, 61, 0.9);
+}
+
+/* Make second satellite a bit smaller/dimmer */
+.gis-orbit-2 .gis-satellite {
+  width: 6px;
+  height: 6px;
+  background: #ffe3c2;
+  box-shadow:
+    0 0 4px rgba(255, 200, 140, 0.9),
+    0 0 10px rgba(255, 138, 61, 0.7);
+}
+
+/* Orbit rotation */
+@keyframes gis-orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Pulse halo around bubble */
+.gis-chat-icon::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--gis-accent-soft);
+  opacity: 0.9;
+  animation: gis-pulse 1.8s ease-out infinite;
+}
+
+@keyframes gis-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+}
+
+/* If you have a phoenix SVG inside, make sure it scales nicely */
+.gis-chat-icon svg {
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+
+/* ===== Chat panel ===== */
+
+.gis-chat-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  width: 380px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #171c2b 0, #050609 55%);
+  border-radius: var(--gis-radius-lg);
+  border: 1px solid var(--gis-border);
+  box-shadow: var(--gis-shadow);
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transform-origin: bottom right;
+  transition:
+    opacity var(--gis-transition-fast),
+    transform var(--gis-transition-fast),
+    visibility var(--gis-transition-fast);
+  visibility: visible;
+  z-index: 9991;
+  backdrop-filter: blur(14px);
+}
+
+/* Hidden / closed state */
+.gis-chat-panel.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(18px) scale(0.96);
+  pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .gis-chat-toggle {
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .gis-chat-panel {
+    right: 8px;
+    left: 8px;
+    width: auto;
+    bottom: 80px;
+    max-height: 75vh;
+  }
+}
+
+/* ===== Header ===== */
+
+.gis-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: linear-gradient(to right, rgba(6, 10, 24, 0.95), rgba(15, 13, 9, 0.95));
+  border-bottom: 1px solid rgba(255, 138, 61, 0.16);
+}
+
+.gis-chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gis-chat-mini-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #ffb86b, #ff8a3d 55%, #2b1710 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255, 138, 61, 0.45);
+}
+
+.gis-chat-mini-icon svg {
+  width: 70%;
+  height: 70%;
+}
+
+.gis-chat-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gis-text-main);
+}
+
+.gis-chat-subtitle {
+  font-size: 0.72rem;
+  color: var(--gis-text-muted);
+}
+
+.gis-chat-close {
+  border: none;
+  background: transparent;
+  color: var(--gis-text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 999px;
+  transition:
+    background var(--gis-transition-fast),
+    color var(--gis-transition-fast),
+    transform var(--gis-transition-fast);
+}
+
+.gis-chat-close:hover,
+.gis-chat-close:focus-visible {
+  background: rgba(255, 138, 61, 0.12);
+  color: var(--gis-accent);
+  transform: scale(1.03);
+}
+
+.gis-chat-close:focus-visible {
+  outline: 2px solid var(--gis-accent);
+  outline-offset: 2px;
+}
+
+/* ===== Messages area ===== */
+
+.gis-chat-messages {
+  padding: 10px 12px 14px;
+  flex: 1;
+  overflow-y: auto;
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 138, 61, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      210deg,
+      rgba(255, 138, 61, 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 140px 140px;
+}
+
+/* Custom scrollbar (desktop) */
+.gis-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.gis-chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gis-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 184, 0.4);
+  border-radius: 999px;
+}
+
+.gis-chat-message-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.gis-chat-message-row.from-bot {
+  justify-content: flex-start;
+}
+
+.gis-chat-message-row.from-user {
+  justify-content: flex-end;
+}
+
+.gis-chat-message {
+  max-width: 85%;
+  padding: 7px 10px;
+  border-radius: 11px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Bot bubble */
+.gis-chat-message.bot {
+  background: rgba(13, 17, 27, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: var(--gis-text-main);
+}
+
+/* User bubble */
+.gis-chat-message.user {
+  background: linear-gradient(135deg, #ff8a3d, #f7681f);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #050505;
+}
+
+/* Tiny timestamp or meta, optional */
+.gis-chat-meta {
+  font-size: 0.7rem;
+  color: var(--gis-text-muted);
+  margin-top: 2px;
+}
+
+/* ===== Input row ===== */
+
+.gis-chat-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 11px;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  background: linear-gradient(to top, rgba(5, 6, 9, 0.98), rgba(10, 12, 18, 0.98));
+}
+
+.gis-chat-input-row input[type="text"],
+.gis-chat-input-row textarea {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.65);
+  background: rgba(5, 6, 9, 0.8);
+  color: var(--gis-text-main);
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  outline: none;
+  resize: none;
+  min-height: 36px;
+  max-height: 72px;
+}
+
+.gis-chat-input-row input::placeholder,
+.gis-chat-input-row textarea::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.gis-chat-input-row input:focus,
+.gis-chat-input-row textarea:focus {
+  border-color: var(--gis-accent);
+  box-shadow: 0 0 0 1px rgba(255, 138, 61, 0.4);
+}
+
+/* Send button */
+
+.gis-chat-input-row button[type="submit"] {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 11px 8px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: radial-gradient(circle at 20% 0, #ffb86b, #ff8a3d 55%, #592210 100%);
+  color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+  transition:
+    transform var(--gis-transition-fast),
+    box-shadow var(--gis-transition-fast),
+    filter var(--gis-transition-fast);
+}
+
+.gis-chat-input-row button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+  filter: brightness(1.02);
+}
+
+.gis-chat-input-row button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.6);
+}
+
+.gis-chat-input-row button[type="submit"]:focus-visible {
+  outline: 2px solid var(--gis-accent);
+  outline-offset: 2px;
+}

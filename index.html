@@ -384,6 +384,48 @@
 
   <button id="backToTop" class="hud-button back-to-top glitch-effect">//↑<span class="cursor">_</span></button>
 
+  <!-- Chat bubble -->
+  <button class="gis-chat-toggle" aria-label="Open chat">
+    <div class="gis-chat-icon">
+      <!-- Orbits + satellites (we'll style them in the next step) -->
+      <span class="gis-orbit gis-orbit-1">
+        <span class="gis-satellite"></span>
+      </span>
+      <span class="gis-orbit gis-orbit-2">
+        <span class="gis-satellite"></span>
+      </span>
+
+      <img src="./assets/images/Logo/phoenix-logo.png" alt="Phoenix Logo" />
+    </div>
+  </button>
+
+  <!-- Chat panel -->
+  <div class="gis-chat-panel is-hidden">
+    <header class="gis-chat-header">
+      <div class="gis-chat-header-left">
+        <div class="gis-chat-mini-icon">
+          <img src="./assets/images/Logo/phoenix-logo.png" alt="Phoenix Logo" />
+        </div>
+        <div>
+          <div class="gis-chat-title">Goluza Interface Assistant</div>
+          <div class="gis-chat-subtitle">UX • Web • Sci-Fi Systems</div>
+        </div>
+      </div>
+      <button class="gis-chat-close" aria-label="Close chat">×</button>
+    </header>
+
+    <div class="gis-chat-messages">
+      <!-- messages will be injected here -->
+    </div>
+
+    <form class="gis-chat-input-row">
+      <input type="text" placeholder="Ask me about services, pricing, or process…" />
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+
+
   <footer class="site-footer">
     <p>// CONNECTION TERMINATED_</p>
     <p class="blink">Awaiting next log...</p>
@@ -462,6 +504,7 @@
       });
     });
   </script>
+
 
 
 
