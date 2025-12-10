@@ -2542,7 +2542,8 @@ margin-top: 55px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  bottom: 75px;
+  bottom: 110px;
+  right: 32px;
   background: radial-gradient(circle at 30% 20%, #ffb86b, #ff8a3d 55%, #2b1710 100%);
   display: flex;
   align-items: center;
@@ -2570,11 +2571,26 @@ margin-top: 55px;
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
 }
 
+
 /* Container stays as is, this just makes sure it's the orbit center */
 .gis-chat-icon {
   position: relative;
   overflow: visible; /* allow orbits to be visible outside */
   background: radial-gradient(circle at 30% 20%, #ffb86b, #f37a28 40%, #3a1e10 100%);
+}
+.gis-energy-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 125px;
+  height: 125px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 138, 61, 0.15);
+  box-shadow:
+    0 0 12px rgba(255, 138, 61, 0.15),
+    inset 0 0 18px rgba(255, 138, 61, 0.12);
+  pointer-events: none;
 }
 
 /* Orbits */
@@ -2584,16 +2600,16 @@ margin-top: 55px;
   border-radius: 50%;
   border: 1px dashed rgba(255, 138, 61, 0.4);
   pointer-events: none;
-  animation: gis-orbit-rotate 7.5s linear infinite;
+  animation: gis-orbit-rotate 7s linear infinite;
 }
 
 /* Second orbit - different angle / speed for atomic feel */
 .gis-orbit-2 {
-  inset: -14px;
+  inset: -17px;
   border-style: solid;
   border-color: rgba(255, 138, 61, 0.2);
   transform: rotate(25deg);
-  animation-duration: 11s;
+  animation-duration: 12s;
 }
 
 /* Satellite (small glowing dot) */
@@ -2732,6 +2748,14 @@ margin-top: 55px;
   align-items: center;
   gap: 8px;
 }
+  .gis-energy-ring {
+    width: 100px;
+    height: 100px;
+  }
+ .gis-chat-icon {
+    width: 52px;
+    height: 52px;
+  }
 
 .gis-chat-mini-icon {
   width: 26px;
