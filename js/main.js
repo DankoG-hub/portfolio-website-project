@@ -217,12 +217,32 @@ backToTopBtn.addEventListener("click", () => {
       // Later this is where you call your Dialogflow webhook / REST API
       setTimeout(() => {
         addMessage(
-          "Thanks for your message. In the final version, this assistant will give you tailored info about services, timelines, and project ideas based on my Dialogflow model.",
+          "Hi there! I’m the Goluza Interface Assistant. I’m still being built, so I can’t give full answers yet — but a smarter AI version is coming very soon.",
           "bot"
         );
       }, 400);
     });
   });
+
+  // Hint bubble logic
+const hint = document.querySelector(".gis-chat-hint");
+
+if (hint) {
+  setTimeout(() => {
+    hint.classList.add("show");
+  }, 1200); // delay before showing (optional)
+
+  setTimeout(() => {
+    hint.classList.remove("show");
+  }, 8000); // disappears after 8 seconds
+}
+if (hint && !sessionStorage.getItem("gisHintShown")) {
+  sessionStorage.setItem("gisHintShown", "true");
+
+  setTimeout(() => hint.classList.add("show"), 1200);
+  setTimeout(() => hint.classList.remove("show"), 8000);
+}
+
 
 
 

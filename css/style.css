@@ -2688,7 +2688,7 @@ margin-top: 55px;
   right: 24px;
   bottom: 96px;
   width: 380px;
-  max-height: 70vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   background: radial-gradient(circle at top, #171c2b 0, #050609 55%);
@@ -2731,6 +2731,32 @@ margin-top: 55px;
     max-height: 75vh;
   }
 }
+
+/* Hint bubble */
+.gis-chat-hint {
+  position: absolute;
+  right: 70px; /* distance from the icon */
+  bottom: 80px;
+  background: rgba(255, 138, 61, 0.95);
+  color: #050505;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+/* When visible */
+.gis-chat-hint.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ===== Header ===== */
 
@@ -2863,7 +2889,9 @@ margin-top: 55px;
   font-size: 0.82rem;
   line-height: 1.4;
   word-wrap: break-word;
+  font-family: 'Lexend', system-ui, sans-serif;
 }
+
 
 /* Bot bubble */
 .gis-chat-message.bot {
