@@ -2737,7 +2737,8 @@ margin-top: 55px;
   position: absolute;
   right: 70px; /* distance from the icon */
   bottom: 80px;
-  background: rgba(255, 138, 61, 0.95);
+  background: rgba(255, 138, 61, 0.78);
+  backdrop-filter: blur(3px);
   color: #050505;
   padding: 6px 12px;
   border-radius: 12px;
@@ -2750,6 +2751,9 @@ margin-top: 55px;
   transition: opacity 0.35s ease, transform 0.35s ease;
   pointer-events: none;
 }
+
+
+
 
 /* When visible */
 .gis-chat-hint.show {
