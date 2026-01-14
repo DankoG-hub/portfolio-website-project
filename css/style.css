@@ -1412,12 +1412,12 @@ nav li{
   flex-direction: column;
   justify-content: space-between;
   background: #13161f;
-    background-image: none;
+  background-image: none;
   box-shadow: inset 0 0 20px rgba(255,140,0,.12);
   border: 1px solid #ff8c00;
   border-radius: 12px;
   width: 230px;
-  min-height: 230px;
+  min-height: 250px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1447,15 +1447,26 @@ nav li{
 
 /* BODY GROWS BUT BTN STAYS ------------------------- */
 .card-body{
-  flex:1;                         /* 👉 takes all remaining */
+  flex:1;                         
   display: flex;
   flex-direction: column;
 
   align-items:center;
-  justify-content:flex-start;     /* 👉 text always top */
+  justify-content:flex-start;     
 
   padding:16px;
   gap:10px;
+}
+.card-body::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border: 1px solid rgba(255, 126, 27, 0.18);
+  pointer-events: none;
+  opacity: 0.7;
+  background-image: linear-gradient(transparent 95%, rgba(255, 126, 27, 0.07) 96%), linear-gradient(90deg, transparent 95%, rgba(255, 126, 27, 0.07) 96%);
+  background-size: 30px 30px;
+  mix-blend-mode: screen;
 }
 
 /* typography -------------------------------------- */
@@ -1488,11 +1499,15 @@ nav li{
   letter-spacing: 3px;
   border-radius: 22px;
   cursor: pointer;
-
   box-shadow: 0 0 10px rgba(255,140,0,.5);
   transition: all .3s ease;
-  margin-top: auto;
+  margin-top: 10px;
 }
+
+.orbit-proceed-btn:active {
+  transform: scale(0.98);
+}
+
 
 .orbit-proceed-btn:hover{
   background:rgba(255,140,0,.28);
