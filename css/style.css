@@ -1553,33 +1553,59 @@ nav li{
 
 /* PROJECTS */
 #projects {
-  scroll-margin-top: 100px; /* adjust based on your header height */
+  scroll-margin-top: 100px;
 }
+
 .projects {
+  position: relative;
   background-image: url(../assets/images/hangar.png);
   background-size: cover;
   background-position: center;
-  display: column;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 60px;
+  justify-content: center;
+
+  text-align: center;
+  padding: 80px 24px;
   color: #e6e6e6;
   line-height: 1.9;
   overflow: hidden;
-  /*clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%);*/
-  
-
 }
-.projects p{
-    justify-content: center;
-    margin: 0 auto;
-    font-family: lexend giga, sans-serif;
-  }
-  .projects-btn{
-    margin-top: 35px;
-  }
+
+/* subtle dark overlay for readability */
+.projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.112);
+  pointer-events: none;
+}
+
+.projects-inner {
+  position: relative; /* stays above overlay */
+  width: 100%;
+  max-width: 900px;   /* <- this is the “shrink width” */
+  margin: 0 auto;
+}
+
+.projects p {
+  margin: 14px auto 0;
+  font-family: lexend giga, sans-serif;
+  max-width: 760px; /* tighter text width for readability */
+}
+
+.projects-btn {
+  margin-top: 35px;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .projects { padding: 64px 18px; }
+  .projects p { line-height: 1.75; }
+}
+
 /* PROJECTS END*/
 
 .data-log {
