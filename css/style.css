@@ -1598,6 +1598,7 @@ nav li{
 
 .projects-btn {
   margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 /* Mobile tweak */
@@ -2694,21 +2695,73 @@ margin-top: 55px;
 /*** ABOUT PAGE END ***/
 
 /*  PROJECTS  */
+.hero .projectsH1{
+    margin-bottom: 65px;
+}
 
 .projects-hero {
   background-image: url(../assets/images/hangar-bay3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: relative;
   margin: 0;
-  padding: 0; /* fine, but only useful if width is limited */
+  padding: 0;
 }
+
+/* readability overlay */
+.projects-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 50% 45%,
+      rgba(0,0,0,0.35) 0%,
+      rgba(0,0,0,0.60) 65%,
+      rgba(0,0,0,0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.projects-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 92%);
+  text-align: center;
+  padding: 0 12px;
+}
+.heroH1 {
+  margin: 0 0 26px;
+  line-height: 1.05;
+}
+
+.heroH1 .h1-span {
+  display: inline-block;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.projects-hero .hero-content a {
+  margin: 10px 10px 0;
+}
+
+@media (max-width: 640px) {
+  .projects-hero .hero-content a {
+    display: block;
+    width: min(360px, 92%);
+    margin: 12px auto 0;
+  }
+}
+
+
+
 
 .project-terminal{
     background-color: rgba(10, 10, 10, 0.85);
