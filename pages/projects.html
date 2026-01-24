@@ -58,9 +58,10 @@
       <div class="hero-content">
         <h1 class="heroH1 projectsH1">PROJECTS <br><span class="h1-span glitch" data-text=" //Legacy Terminal_">//Legacy
             Terminal<span class="cursor">_</span></span></h1>
-        <a href="#webdesign" class="hud-button glitch-effect hero-btn transmissionBtn">Enter Interface</a>
-        <a href="../index.html#contact" class="hud-button glitch-effect secondary transmissionBtn">//Get In Touch<span
-            class="cursor">_</span></a>
+        <a href="#webdesign" class="hud-button glitch-effect hero-btn transmissionBtn projectBTN1">Enter
+          Interface</a><br>
+        <!--<a href="../index.html#contact" class="hud-button glitch-effect secondary transmissionBtn">//Get In Touch<span
+            class="cursor">_</span></a>-->
       </div><!--hero-content-->
     </div><!--hero-->
   </header>
@@ -216,19 +217,18 @@
   <script src="../js/main.js" async defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      console.log("Inline JS works!");
-
       const burger = document.getElementById("hamburger");
       const navLinks = document.getElementById("navLinks");
 
       if (burger && navLinks) {
         burger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-          console.log("Hamburger clicked!");
+          burger.classList.toggle("active");   // ✅ add this
+          navLinks.classList.toggle("active"); // already here
         });
       }
     });
   </script>
+
 
   <!--BACK TO TOP BTN-->
   <script>
