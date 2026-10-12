@@ -25,8 +25,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+  
 
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    #personalModal .modal-content p {
+      font-family: "Lexend", sans-serif;
+      font-weight: 400;
+      font-size: clamp(16px, 1.2vw, 18px);
+      line-height: 1.75;
+      letter-spacing: normal;
+      text-align: left;
+      margin: 0 0 1.2em;
+    }
+  @media (max-width: 960px) {
+      .navbar { backdrop-filter: none; -webkit-backdrop-filter: none; }
+      .navbar #navLinks {
+        position: fixed;
+        inset: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        box-sizing: border-box;
+        padding: 80px 0 24px;
+        border-top: 0;
+        overflow-y: auto;
+      }
+    }
+  /* About page typography */
+    body, .about2-left, .site-footer {
+      font-family: "Lexend", system-ui, sans-serif;
+    }
+    body p, #about2 .about-text, .mission .about-text, .vision .about-text,
+    #about2 .about2-ul li, .timeline p, .transmission-cta p {
+      font-family: "Lexend", system-ui, sans-serif;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 1.75;
+    }
+    body h1, body h2, body h3, body h4,
+    body .hud-button, body button, .nav-links a, .hero-services {
+      font-family: "Audiowide", sans-serif;
+    }
+    #about2 .about2-ul .ul-span {
+      font-family: "Audiowide", sans-serif;
+      font-weight: 400;
+      letter-spacing: normal;
+      color: #ff7e1b;
+    }
+  </style>
 </head>
 
 <body>
@@ -54,13 +102,19 @@
     </nav>
 
     <!--HERO-->
-    <div class="hero about-hero">
+    <div class="hero about-hero" style="background-image: url('../assets/images/about-hero-composite-v1.png');">
       <div class="hero-content about-hero-content">
-        <h1>DANKO GOLUZA </h1>
-        <span class="h1-span glitch" data-text=" //Web Designer_">//Web Designer
-          <span class="cursor">_</span><br>
-          <!--<p class="glitch">I design future-bound digital interfaces <br>that merge story, structure, and technology</p>-->
-          <a href="#features" class="hud-button glitch-effect hero-btn">Engage</a>
+                <h1>DANKO GOLUZA <br></h1>
+        <div class="heroH1" style="font-weight: 700; margin-bottom: 0;">
+          <span class="h1-span hero-services">
+            <span class="hero-service">//WEB DESIGN</span>
+            <span class="service-separator" aria-hidden="true">|</span>
+            <span class="hero-service">AI SOLUTIONS</span>
+          </span>
+        </div>
+          <div style="display: flex; justify-content: center; align-items: center; margin-top: 40px;">
+            <a href="#about2" id="engageIdentity" class="hud-button glitch-effect hero-btn" style="margin: 0;">Engage</a>
+          </div>
       </div><!--hero-content-->
     </div><!--hero-->
   </header>
@@ -73,49 +127,32 @@
 
   <div class="about2 personal" id="about2">
     <div class="row">
-      <div class="about2-left personal1">
+     <div class="about2-left personal1">
         <h2><span class="h2-span">//Identity Panel<span class="cursorWhite">_</span></span></h2>
-        <ul class="about2-ul">
-          <li><span class="ul-span">Name_ <br></span> Danko Goluža</li><br>
-          <li><span class="ul-span">Role_ <br></span>· Web Designer <br>· Front-End Developer <br>· UX/UI Designer </li>
-          <br>
-          <li><span class="ul-span">Location_ <br></span> Dublin, Ireland //Earth</li><br>
-          <li><span class="ul-span">Specialties_ <br></span>· Interface Design · UX/UI<br>· Front-End
-            Development · Web Design <br>· Digital Aesthetics</li><br>
-          <li><span class="ul-span">Traits_ <br></span>· Focused · Detail-Oriented <br>· Resilient · Structured
-            Thinker</li>
+        <ul class="about2-ul" style="display: flex; flex-direction: column; gap: 0.8em;">
+          <li style="margin: 0;"><span class="ul-span">Name_ </span><br>· Danko Goluža</li>
+          <li style="margin: 0;"><span class="ul-span">Role_ </span><br>· Web Designer &amp; Developer<br>· UX/UI Designer<br>· Founder, Goluza Interface Studio</li>
+          <li style="margin: 0;"><span class="ul-span">Location_ </span><br>· Dublin, Ireland //Earth</li>
+          <li style="margin: 0;"><span class="ul-span">Focus_ </span><br>· Web Design &amp; Development<br>· User Experience &amp; Interface Design<br>· AI Integrations &amp; Conversational Interfaces<br>· SaaS &amp; Product Prototyping</li>
+          <li style="margin: 0;"><span class="ul-span">Working Style_ </span><br>· Curious<br>· Detail-Oriented<br>· Practical<br>· Structured<br>· User-Focused</li>
         </ul>
       </div>
       <div class="about2-right personal2">
 
         <h2><span class="h1-span">//Command Access Granted<span class="cursor">_</span></span></h2>
 
-        <p class="about-text">Welcome to my personal archive.<br>Here, I share my journey as a Web Designer,
-          exploring the
-          intersection of design and technology.<br>
-        <p class="about-text">With a background in both design and development, I strive to bridge the gap between
-          aesthetics and
-          functionality,
-          ensuring that every project I undertake is not only visually appealing but also user-friendly.</p>
+        <p class="about-text">My work starts with a simple question: what does someone need to do, and how can I make that easier? That guides how I organise information, shape an interface, and choose the technology behind it.</p>
+        <p class="about-text">Working independently means staying close to the whole process, from early ideas to the details of the finished experience. Alongside client projects, I’m exploring SaaS concepts and product prototypes, with an interest in how conversational AI can make everyday interactions more useful and intuitive.</p>
         <a href="#" id="openModal" class="hud-button glitch-effect hero-btn aboutBtn">//Log: Personal Insight<span
             class="cursor">_</span></a>
         <div id="personalModal" class="modal">
           <div class="modal-content">
             <span id="closeModal" class="close">&times;</span>
             <h2><span class="h1-span">//Personal Log</span> <span class="cursor">_</span></h2>
-            <p>This is your insight zone — reflections, growth, thoughts… all logged here for explorers like you.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit obcaecati mollitia soluta excepturi harum
-              autem quod placeat ad nobis reiciendis quisquam in, minus repellat neque ipsa amet ipsum tempora eligendi
-              quasi porro? Eius ullam eum distinctio amet nemo soluta unde ipsam id quasi quaerat, voluptatibus
-              cupiditate fuga accusantium provident iure?</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dicta doloremque vero deleniti? Iste
-              beatae a ex odit similique facere accusamus ipsa impedit. Asperiores eum facere quae ducimus molestiae a
-              aspernatur vitae earum cumque. Enim minus at ratione, reprehenderit nemo, consequuntur nostrum provident,
-              cumque incidunt recusandae veniam ad maxime voluptas?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores qui id numquam. Laudantium ipsam quo
-              nulla aliquid quod! Unde quod, nemo omnis voluptate rem similique debitis. Dolor reiciendis at esse, eos
-              quis fuga ipsum laboriosam nostrum quas perferendis fugit aperiam exercitationem repellat deserunt quod
-              distinctio consequuntur modi non? Accusantium, ducimus.</p>
+            <p>Before working with websites, I spent years playing traditional Croatian music and guiding visitors along Croatia’s coast. Both involved connecting with people, paying attention, and finding a way to make an experience meaningful.</p>
+            <p>Moving to Dublin in 2019 opened a new chapter. Alongside my work as a multimedia and content analyst, I began developing my skills in design and web development. Goluza Interface Studio grew from that process: learning, making things, and taking responsibility for real projects.</p>
+            <p>The science-fiction influence you see here is personal. I’m drawn to interfaces that feel like part of a larger world, where small details invite you to look closer. This portfolio gives me space to explore that interest and develop a visual language of my own.</p>
+            <p>I’m still shaping where the studio goes next. What keeps me interested is the process itself: understanding an idea, figuring out how to build it, and seeing someone use what I’ve made.</p>
           </div>
         </div>
 
@@ -124,45 +161,12 @@
     </div>
   </div><!--about2-->
 
-  <!--FEATURES-->
   <div class="sub-section1">
     <h1 class="sub-h1">//My journey through the digital cosmos <!-- or Design Systems ?y--><span
         class="cursor_subSection">_</span></h1>
   </div><!--sub-section1-->
-
-  <!--<div class="features" id="features">
-    <div class="row">
-      <div class="featuresBox1 fBox">
-        <span class="corner-dot tl"></span>
-        <span class="corner-dot br"></span>
-        <h3 class="h2-span"><span class="ul-span">//Frontend Dev</span><span class="cursor_subSection">_</span></h3>
-        <p class="features-text">HTML, CSS, JS, REACT..mission in progress_</p>
-
-      </div>
-      <div class="featuresBox2 fBox">
-        <span class="corner-dot tl"></span>
-        <span class="corner-dot br"></span>
-        <h3 class="h2-span"><span class="ul-span">//UX Design</span><span class="cursor_subSection">_</span></h3>
-        <p class="features-text">Sketching, Wireframing, Figma</p>
-
-      </div>
-      <div class="featuresBox3 fBox">
-        <span class="corner-dot tl"></span>
-        <span class="corner-dot br"></span>
-        <h3 class="h2-span"><span class="ul-span">//Design Systems</span><span class="cursor_subSection">_</span></h3>
-        <p class="features-text">Component-Based Thinking</p>
-
-      </div>
-      <div class="featuresBox4 fBox">
-        <span class="corner-dot tl"></span>
-        <span class="corner-dot br"></span>
-        <h3 class="h2-span"><span class="ul-span">//Creative</span><span class="cursor_subSection">_</span></h3>
-        <p class="features-text">Sc-Fi Theming, Branding, Storytelling</p>
-      </div>
-    </div>
-  </div>-->
-
-  <!-- CORE VALUES -->
+  
+    <!-- CORE VALUES -->
   <section id="values" class="core-values">
     <div class="core-values-inner">
 
@@ -196,7 +200,7 @@
             <h3 class="core-title">Integrity in Craft</h3>
           </div>
           <p class="core-text">
-            I treat each project with discipline and honesty — delivering work I’d proudly attach my name to.
+            I treat each project with discipline and honesty, delivering work I’d proudly attach my name to.
           </p>
         </article>
 
@@ -207,7 +211,7 @@
             <h3 class="core-title">Human-First Thinking</h3>
           </div>
           <p class="core-text">
-            Before aesthetics or tech, I design for real people — their focus, habits, doubts, and goals.
+            I design around real people: their focus, habits, doubts, and goals.
           </p>
         </article>
 
@@ -230,7 +234,7 @@
             <h3 class="core-title">Resilience &amp; Focus</h3>
           </div>
           <p class="core-text">
-            Complex problems don’t scare me. I break them into systems, iterate, and keep moving until it works.
+            I break complex problems into manageable steps, test possible solutions, and keep improving until they work.
           </p>
         </article>
 
@@ -241,7 +245,7 @@
             <h3 class="core-title">Continuous Evolution</h3>
           </div>
           <p class="core-text">
-            I build for the present while learning for the future — improving my process, tools, and interfaces over
+            I build for the present while learning for the future, improving my process, tools, and interfaces over
             time.
           </p>
         </article>
@@ -253,7 +257,7 @@
   <!-- CORE VALUES END -->
 
 
-  <!-- SERVICE SOLAR SYSTEM -->
+ <!-- SERVICE SOLAR SYSTEM -->
   <section class="service-orbit-section">
     <div class="service-orbit-inner">
       <header class="service-orbit-header">
@@ -324,35 +328,25 @@
   </section>
   <!-- SERVICE SOLAR SYSTEM END -->
 
-
-
   <!--MISSION-->
   <div class="sub-section1">
     <h1 class="sub-h1">Form follows Frequency<span class="cursor_subSection">_</span></h1>
   </div><!--sub-section1-->
   <div class="mission" id="mision">
     <h2><span class="h1-span">//MISSION<span class="cursor">_</span></span></h2>
-    <p class="about-text">My mission is to create digital experiences that resonate with users on a deeper level.<br>
-      I aim to design interfaces that are not only visually stunning but also intuitive and user-friendly.<br> By
-      combining
-      creativity with technology, I strive to push the boundaries of what is possible in web design.</p>
-    <p class="about-text">I design not just for screens, but for minds. My mission is to craft interfaces that inspire
-      curiosity, deliver clarity, and resonate with human emotion while wrapped in the aesthetics of the future.</p>
+    <p class="about-text">My mission is to help businesses communicate clearly and serve their customers through thoughtful web design and practical AI integrations.</p>
+    <p class="about-text">I bring design and development together to create websites and interfaces with a clear purpose, a distinctive identity, and attention to the people using them.</p>
   </div><!--mission-->
   <!--MISSION END-->
 
   <!--VISION-->
   <div class="sub-section1">
-    <h1 class="sub-h1">From pioneer to Frontier<span class="cursor_subSection">_</span></h1>
+    <h1 class="sub-h1">The Next Horizon<span class="cursor_subSection">_</span></h1>
   </div><!--sub-section1-->
   <div class="vision" id="vision">
     <h2><span class="h1-span">//VISION<span class="cursor">_</span></span></h2>
-    <p class="about-text">My vision is to redefine how people experience the digital world, to make interfaces feel
-      lighter, clearer, and more human.
-      I see a future where digital spaces are not sources of stress but places of focus, inspiration, and effortless
-      interaction.</p>
-    <p class="about-text">I envision digital spaces that reduce friction, guide attention, and turn everyday screen time
-      into something calm, immersive, and meaningful.</p>
+    <p class="about-text">My vision is to grow Goluza Interface Studio into an independent digital product studio, building on client work to develop useful tools and services of its own.</p>
+    <p class="about-text">I’m exploring SaaS and conversational AI as part of that direction, starting with specific problems, testing ideas, and learning from how people use what I build.</p>
   </div><!--vision-->
   <!--VISION END-->
 
@@ -373,24 +367,21 @@
         <div class="timeline-item">
           <span class="timeline-date"><span class="h1-span">BEFORE 2019</span></span>
           <h3>Musician & Tour Guide in Croatia</h3>
-          <p class="timelineP">Before launching into the digital space, I spent years expressing creativity through
-            traditional Croatian
+          <p class="timelineP">Before launching into the digital space, I spent years expressing creativity through traditional Croatian
             music as a band member, while also guiding travelers through the beauty of Croatia’s coast.
             → These experiences shaped my storytelling and people-focused mindset.</p>
         </div><!--timeline-item-->
         <div class="timeline-item">
           <span class="timeline-date"><span class="h1-span">2019 - PRESENT</span></span>
           <h3>Multimedia & Content Analyst – Accenture (Dublin)</h3>
-          <p class="timelineP">I maintain my analyst role while building my own sci-fi themed agency and portfolio —
-            fusing creativity,
+          <p class="timelineP">I maintain my analyst role while building my own sci-fi themed agency and portfolio — fusing creativity,
             structure, and identity into every pixel.
             → One foot in the matrix, the other building my own universe.</p>
         </div><!--timeline-item-->
         <div class="timeline-item">
-          <span class="timeline-date"><span class="h1-span">2025 & ONGOING<span class="cursor">_</span></span></span>
+          <span class="timeline-date"><span class="h1-span">ONGOING<span class="cursor">_</span></span></span>
           <h3>Launching own Web Agency & Portfolio</h3>
-          <p class="timelineP">The mission: help brands and individuals stand out through emotionally intelligent,
-            visually immersive
+          <p class="timelineP">The mission: help brands and individuals stand out through emotionally intelligent, visually immersive
             websites — crafted at the intersection of tech and story.</p>
         </div><!--timeline-item-->
       </div><!--timeline-item1-->
@@ -414,43 +405,53 @@
 
   <button id="backToTop" class="hud-button back-to-top glitch-effect">//↑<span class="cursor">_</span></button>
 
-  <footer class="site-footer">
-    <p>// CONNECTION TERMINATED_</p>
-    <p class="blink">Awaiting next log...</p>
-  </footer>
-
-  <!-- LEGAL LINKS ROW -->
-  <div class="legal-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-    <a href="cookies.html">Cookie Policy</a>
-    <a href="imprint.html">Imprint</a>
-  </div>
-
-  <div class="footer-links">
-    <ul>
-      <li>© 2025</li>
-      <li>Goluza Interface Studio_</li>
-      <li>//All Rights Reserved_</li>
-    </ul>
-  </div>
-  <!--FOOTER END-->
+  <style id="gis-shared-footer">
+html body .site-footer.gis-footer-end { background:#111; color:#aaa; padding:20px; text-align:center; border:0; border-top:1px solid #222; font-family:"Lexend",sans-serif; }
+html body .site-footer.gis-footer-end p { margin:1em 0; color:#aaa; font-family:"Lexend",sans-serif; font-size:16px; font-weight:400; line-height:1.75; letter-spacing:normal; }
+html body .legal-links.gis-footer-legal { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:14px; padding:18px 20px; background:#0d0d0d; border-top:1px solid #ff7e1b26; border-bottom:1px solid #ff7e1b26; font-family:"Lexend",sans-serif; font-size:.78rem; letter-spacing:1px; }
+html body .legal-links.gis-footer-legal a { color:#bdbdbd; font-family:"Lexend",sans-serif; font-size:inherit; font-weight:500; letter-spacing:inherit; text-decoration:none; }
+html body .legal-links.gis-footer-legal a:hover { color:#ff7e1b; }
+html body .legal-links.gis-footer-legal span { color:#ff7e1b80; }
+html body .footer-links.gis-footer-credit { display:flex; align-items:center; justify-content:center; padding:0; color:#000; background: url('/assets/images/body-bg2.png') no-repeat center center; }
+html body .footer-links.gis-footer-credit ul { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:center; gap:0 .35em; margin:1em 0; padding:0 20px; list-style:none; }
+html body .footer-links.gis-footer-credit li { display:inline-block; font-family:"Lexend",sans-serif; font-size:16px; font-weight:400; line-height:normal; letter-spacing:normal; color:#000; }
+html body .footer-links.gis-footer-credit .gis-footer-brand { font-family:"Audiowide",sans-serif; }
+</style>
+<footer class="site-footer gis-footer-end">
+  <p>// CONNECTION TERMINATED_</p>
+  <p class="blink">Awaiting next log...</p>
+</footer>
+<nav class="legal-links gis-footer-legal" aria-label="Legal">
+  <a href="/pages/privacy-policy.html">Privacy Policy</a>
+  <span aria-hidden="true">//</span>
+  <a href="/pages/terms.html">Terms of Use</a>
+  <span aria-hidden="true">//</span>
+  <a href="/pages/cookie-policy.html">Cookie Policy</a>
+</nav>
+<div class="footer-links gis-footer-credit">
+  <ul>
+    <li>© 2026</li>
+    <li class="gis-footer-brand">Goluza Interface Studio_</li>
+    <li>//All Rights Reserved_</li>
+  </ul>
+</div>
+<!--FOOTER END-->
 
   <script src="..js/main.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("navLinks");
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
 
-      if (burger && navLinks) {
-        burger.addEventListener("click", () => {
-          burger.classList.toggle("active");   // ✅ add this
-          navLinks.classList.toggle("active"); // already here
-        });
-      }
-    });
-  </script>
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");   // ✅ add this
+        navLinks.classList.toggle("active"); // already here
+      });
+    }
+  });
+</script>
 
 
   <!--BACK TO TOP BTN-->
@@ -510,7 +511,7 @@
     });
 
   </script>
-
+  
   <script>
     // Planets + radar labels
     document.addEventListener("DOMContentLoaded", () => {
@@ -593,8 +594,253 @@
 
 
 
+<script>
+(() => {
+  const button = document.getElementById('engageIdentity');
+  const panel = document.getElementById('about2');
+  if (!button || !panel) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let busy = false;
+  const arrive = () => {
+    const heading = panel.querySelector('h2');
+    if (heading) {
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+    panel.scrollIntoView({ behavior: motion.matches ? 'instant' : 'smooth', block: 'start' });
+    busy = false;
+  };
+  button.addEventListener('click', (event) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (busy) return;
+    if (motion.matches) { arrive(); return; }
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    if (!ctx) { arrive(); return; }
+    busy = true;
+    canvas.width = 240;
+    canvas.height = 135;
+    canvas.setAttribute('aria-hidden', 'true');
+    canvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;z-index:10000;pointer-events:none;opacity:0.18;image-rendering:pixelated;';
+    const grain = ctx.createImageData(canvas.width, canvas.height);
+    const draw = () => {
+      for (let i = 0; i < grain.data.length; i += 4) {
+        const shade = Math.floor(Math.random() * 256);
+        grain.data[i] = grain.data[i + 1] = grain.data[i + 2] = shade;
+        grain.data[i + 3] = 255;
+      }
+      ctx.putImageData(grain, 0, 0);
+      ctx.fillStyle = 'rgba(0, 220, 230, 0.25)';
+      ctx.fillRect(0, Math.floor(Math.random() * canvas.height), canvas.width, 1);
+    };
+    draw();
+    document.body.appendChild(canvas);
+    const timer = window.setInterval(draw, 50);
+    window.setTimeout(() => {
+      window.clearInterval(timer);
+      canvas.remove();
+      arrive();
+    }, 320);
+  });
+})();
+</script>
+<style id="service-orbit-interaction-style">
+.service-orbit-map .orbit-1 { animation-duration: 28s; animation-delay: -3s; }
+.service-orbit-map .orbit-2 { animation-duration: 38s; animation-delay: -12s; }
+.service-orbit-map .orbit-3 { animation-duration: 48s; animation-delay: -27s; }
+.service-orbit-map .orbit-4 { animation-duration: 58s; animation-delay: -8s; }
+.service-orbit-map .orbit-5 { animation-duration: 68s; animation-delay: -43s; }
+.service-orbit-map .orbit-6 { animation-duration: 80s; animation-delay: -62s; }
+.service-orbit-map.is-paused .orbit,
+.service-orbit-map.is-paused .orbit-scan-sector::after { animation-play-state: paused; }
+.service-orbit-map .planet::after { content: ""; position: absolute; width: 44px; height: 44px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; }
+.service-orbit-map .planet[aria-expanded="true"],
+.service-orbit-map .planet:focus-visible { outline: 2px solid #ff7e1b; outline-offset: 5px; box-shadow: 0 0 22px #ff7e1b99; }
+.service-orbit-inner { position: relative; }
+.orbit-service-card { position: absolute; z-index: 20; width: 300px; max-width: calc(100% - 24px); padding: 24px; box-sizing: border-box; border: 1px solid #ff7e1b99; border-radius: 8px; background: rgba(8,14,20,.97); box-shadow: 0 16px 40px #0008; text-align: left; }
+.orbit-service-card[hidden] { display: none; }
+.orbit-service-card h3 { font-family: Audiowide, sans-serif; color: #ff7e1b; font-size: 17px; line-height: 1.5; margin: 0 28px 12px 0; letter-spacing: normal; }
+.orbit-service-card p { font-family: Lexend, sans-serif; color: #e5e7eb; font-size: 16px; font-weight: 400; line-height: 1.7; letter-spacing: normal; margin: 0; }
+.orbit-service-card .orbit-card-close { position: absolute; right: 4px; top: 4px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: #ff7e1b; font-size: 28px; cursor: pointer; }
+.orbit-card-close:focus-visible { outline: 2px solid #ff7e1b; }
+@media (max-width: 600px) {
+ .orbit-service-card { position: relative; inset: auto !important; width: 100%; max-width: 100%; margin: 16px auto 0; }
+ .service-orbit-map .orbit { width: var(--orbit-size); height: var(--orbit-size); }
+ .service-orbit-map .orbit-1 { --orbit-size: 32%; }
+ .service-orbit-map .orbit-2 { --orbit-size: 43%; }
+ .service-orbit-map .orbit-3 { --orbit-size: 54%; }
+ .service-orbit-map .orbit-4 { --orbit-size: 65%; }
+ .service-orbit-map .orbit-5 { --orbit-size: 76%; }
+ .service-orbit-map .orbit-6 { --orbit-size: 87%; }
+ .service-orbit-map .orbit-scan-sector { width: 87%; height: 87%; }
+ .service-orbit-map .orbit-sun-core { width: clamp(68px, 20vw, 110px); height: clamp(68px, 20vw, 110px); }
+ .service-orbit-map .orbit-sun-label { font-size: clamp(8px, 2.2vw, 12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+ .service-orbit-map .orbit, .service-orbit-map .orbit-scan-sector::after { animation-play-state: paused !important; }
+}
+</style>
+<script id="service-orbit-interactions">
+(() => {
+ const map = document.querySelector('.service-orbit-map');
+ if (!map) return;
+ const host = map.closest('.service-orbit-inner');
+ const services = {
+  'web-design': ['Web Design', 'Distinctive, responsive websites built around your content, your audience, and what your business needs to achieve.'],
+  'ux-design': ['UX/UI Design', 'Clear layouts and thoughtful interactions that help people find their way and complete tasks with less effort.'],
+  'seo': ['SEO Foundations', 'Site structure, page content, and technical essentials that help search engines understand your website.'],
+  'branding': ['Branding & Systems', 'A consistent visual language across your website, from typography and colour to reusable interface elements.'],
+  'ai-assistants': ['AI Integrations', 'Practical AI assistants and conversational interfaces that help visitors find information and take the next step.'],
+  'mapping': ['Mapping & Strategy', 'Turning early ideas into a clear plan, with content, user journeys, and priorities mapped out before the build.']
+ };
+ const intro = host.querySelector('.service-orbit-intro');
+ if (intro) intro.textContent = 'Explore the services behind Goluza Interface Studio. Select a planet to learn more.';
+ const card = document.createElement('aside');
+ card.id = 'orbit-service-details';
+ card.className = 'orbit-service-card';
+ card.hidden = true;
+ card.setAttribute('aria-labelledby', 'orbit-service-title');
+ card.innerHTML = '<button type="button" class="orbit-card-close" aria-label="Close service description">×</button><div aria-live="polite" aria-atomic="true"><h3 id="orbit-service-title"></h3><p></p></div>';
+ host.appendChild(card);
+ const closeButton = card.querySelector('button');
+ const planets = Array.from(map.querySelectorAll('.planet'));
+ let active = null;
+ let hovering = false;
+ const pause = () => map.classList.toggle('is-paused', Boolean(active));
+ const position = () => {
+  if (!active || window.matchMedia('(max-width: 600px)').matches) return;
+  const r = active.getBoundingClientRect();
+  const h = host.getBoundingClientRect();
+  const w = card.offsetWidth;
+  const ch = card.offsetHeight;
+  let x = r.right - h.left + 18;
+  if (x + w > h.width - 12) x = r.left - h.left - w - 18;
+  card.style.left = Math.max(12, Math.min(x, h.width - w - 12)) + 'px';
+  card.style.top = Math.max(0, Math.min(r.top - h.top - ch / 2 + r.height / 2, h.height - ch)) + 'px';
+ };
+ const close = (restoreFocus = false) => {
+  const previous = active;
+  if (previous) previous.setAttribute('aria-expanded', 'false');
+  active = null;
+  card.hidden = true;
+  if (restoreFocus && previous) previous.focus({preventScroll: true});
+  pause();
+ };
+ planets.forEach(planet => {
+  const service = services[planet.dataset.service];
+  if (!service) return;
+  planet.type = 'button';
+  planet.setAttribute('aria-label', service[0]);
+  planet.setAttribute('aria-expanded', 'false');
+  planet.setAttribute('aria-controls', card.id);
+  planet.addEventListener('click', () => {
+   if (active === planet) { close(); return; }
+   if (active) active.setAttribute('aria-expanded', 'false');
+   active = planet;
+   planet.setAttribute('aria-expanded', 'true');
+   card.querySelector('h3').textContent = service[0];
+   card.querySelector('p').textContent = service[1];
+   card.hidden = false;
+   pause();
+   position();
+   closeButton.focus({preventScroll: true});
+  });
+ });
+ map.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { hovering = true; pause(); } });
+ map.addEventListener('pointerleave', () => { hovering = false; pause(); });
+ map.addEventListener('focusin', pause);
+ map.addEventListener('focusout', () => requestAnimationFrame(pause));
+ closeButton.addEventListener('click', () => close(true));
+ document.addEventListener('keydown', e => { if (e.key === 'Escape' && active) { e.preventDefault(); close(true); } });
+ document.addEventListener('click', e => { if (active && !card.contains(e.target) && !planets.some(p => p.contains(e.target))) close(); });
+ window.addEventListener('resize', position);
+})();
+</script>
+<style id="about-journey-layout">
 
+#timeline.journey-log { 
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: clamp(64px,8vw,112px) 24px; 
+    border: 0; 
+    background: radial-gradient(ellipse at top left, #13232b 0, transparent 60%), #0b1014; 
+    text-align: center; 
+}
 
+.journey-inner { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+#timeline .journey-heading { 
+    margin: 0 0 18px; 
+    color: #ff7e1b; 
+    font-size: clamp(25px,3vw,38px); 
+    padding-top: 30px;
+}
+
+#timeline.journey-log p { 
+    font-family: Lexend, sans-serif; 
+    font-size: 17px !important; 
+    line-height: 1.8; 
+    font-weight: 400; 
+    letter-spacing: normal; 
+    text-align: center; 
+    color: #cbd1d6; 
+    margin: 0 auto; 
+    padding: 30px;
+}
+
+#timeline .journey-intro { max-width: 620px; margin-bottom: 48px; }
+.journey-steps { position: relative; display: grid; gap: 28px; padding-left: 32px; }
+.journey-steps::before { content: ''; position: absolute; left: 5px; top: 34px; bottom: 34px; width: 1px; background: linear-gradient(#ff7e1b,#ff7e1b33); }
+.journey-step { position: relative; display: grid; grid-template-columns: 170px minmax(0,1fr); gap: 28px; padding: 32px; border: 1px solid #ff7e1b33; background: linear-gradient(120deg,#142029b3,#090e13); box-shadow: 0 12px 30px #0003; border-radius: 2px; }
+.journey-step::before { content: ''; position: absolute; left: -33px; top: 34px; width: 9px; height: 9px; border: 1px solid #ff7e1b; background: #ff7e1b; box-shadow: 0 0 12px #ff7e1b66; }
+.journey-date { color: #ff7e1b; font-family: Audiowide,sans-serif; font-size: 14px; line-height: 1.7; }
+#timeline .journey-step h3 { font-family: Audiowide,sans-serif; font-size: clamp(18px,2vw,23px); color: #eef0f2; line-height: 1.5; margin: 0 0 14px; }
+.transmission-cta.journey-outro { padding: clamp(64px,8vw,104px) 24px; border: 0; border-top: 1px solid #ff7e1b55; border-bottom: 1px solid #ff7e1b33; background: radial-gradient(ellipse at center,#202b33,#10171d 75%); text-align: center; }
+.journey-outro h3 { color: #ff7e1b; font-size: clamp(22px,3vw,34px); line-height: 1.5; margin: 0 0 24px; }
+.transmission-cta.journey-outro p { max-width: 600px; margin: 0 auto; color: #d6dbe0; font-family: Lexend,sans-serif; font-size: 18px; line-height: 1.8; text-transform: none; letter-spacing: normal; }
+.journey-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 38px; }
+.journey-actions .hud-button { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 58px; margin: 0; padding: 18px 30px; font-size: 16px; }
+body .site-footer { padding: 42px 24px 30px; background: #090e12; border: 0; }
+body .site-footer p { margin: 0 0 12px; color: #929ea8; font-size: 14px; }
+body .legal-links { padding: 24px; display: flex; justify-content: center; flex-wrap: wrap; gap: 16px 28px; background: #090e12; border-top: 1px solid #ffffff0d; }
+body .legal-links a { color: #b7c0c8; font-family: Lexend,sans-serif; font-size: 13px; letter-spacing: normal; }
+body .footer-links { padding: 20px 24px 32px; background: #090e12; color: #929ea8; }
+body .footer-links ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; margin: 0; padding: 0; list-style: none; }
+body .footer-links li { font-family: Lexend,sans-serif; font-size: 12px; color: #929ea8; letter-spacing: normal; }
+@media(max-width:650px) {
+ .journey-step { grid-template-columns: 1fr; gap: 12px; padding: 24px 20px; }
+ .journey-steps { padding-left: 24px; gap: 24px; }
+ .journey-step::before { left: -25px; }
+ #timeline.journey-log { padding: 64px 18px; }
+ #timeline.journey-log p { font-size: 16px !important; }
+ .journey-actions { flex-direction: column; align-items: center; gap: 20px; }
+ .journey-actions .hud-button { width: min(100%,320px); }
+}
+</style>
+<script id="about-journey-content">
+(() => {
+ const timeline = document.getElementById('timeline');
+ if (timeline) {
+  const divider = timeline.previousElementSibling;
+  const heading = divider && divider.querySelector('.sub-h1');
+  if (heading) heading.innerHTML = 'The Journey So Far<span class="cursor_subSection">_</span>';
+  timeline.classList.add('journey-log');
+  timeline.innerHTML = '<div class="journey-inner"><h2 class="journey-heading">//Timeline_</h2><p class="journey-intro">The experiences that shaped my work, from music and people to design and digital products.</p><div class="journey-steps"><article class="journey-step"><div class="journey-date">BEFORE 2019</div><div><h3>Music &amp; Guiding in Croatia</h3><p>Playing traditional Croatian music and guiding visitors along the coast taught me to listen, communicate, and pay attention to the experience of the people around me.</p></div></article><article class="journey-step"><div class="journey-date">2019 TO PRESENT</div><div><h3>A New Chapter in Dublin</h3><p>Alongside my work as a multimedia and content analyst at Accenture, I developed my skills in web design and development, turning a growing interest into practical project experience.</p></div></article><article class="journey-step"><div class="journey-date">ONGOING</div><div><h3>Building Goluza Interface Studio</h3><p>Today, I design and build websites and explore practical AI integrations through the studio. Client work continues to shape my approach as I develop ideas for digital products and SaaS prototypes.</p></div></article></div></div>';
+ }
+ const outro = document.querySelector('.transmission-cta');
+ if (outro) {
+  outro.classList.add('journey-outro');
+  outro.innerHTML = '<h3>//End of Transmission<span class="cursorWhite">_</span></h3><p>Thanks for exploring my story. Have a project in mind?<br>Let’s talk about what you want to build.</p><div class="journey-actions"><a href="../index.html" class="hud-button glitch-effect">//Return to Bridge</a><a href="../index.html#contact" class="hud-button glitch-effect">//Get in Touch</a></div>';
+ }
+ const year = document.querySelector('.footer-links li');
+ if (year) year.textContent = '© ' + new Date().getFullYear();
+})();
+</script>
 </body>
 
 </html>

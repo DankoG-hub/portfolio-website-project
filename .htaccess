@@ -1,0 +1,34 @@
+# --------------------------------------------------
+# GOLUZA INTERFACE STUDIO
+# Canonical redirects and basic protection
+# --------------------------------------------------
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block public access to the Git repository
+  RewriteRule (^|/)\.git(?:/|$) - [F,L,NC]
+
+  # Remove duplicate homepage URL:
+  # /index.html -> /
+  RewriteCond %{THE_REQUEST} \s/+index\.html(?:[\s?]) [NC]
+  RewriteRule ^index\.html$ https://dankogoluza.com/ [R=301,L]
+
+  # Redirect www to the preferred non-www domain
+  RewriteCond %{HTTP_HOST} ^www\.dankogoluza\.com$ [NC]
+  RewriteRule ^ https://dankogoluza.com%{REQUEST_URI} [R=301,L]
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+  RewriteRule ^ https://dankogoluza.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# Block unnecessary macOS metadata files
+<FilesMatch "(?i)^\.DS_Store$">
+  Require all denied
+</FilesMatch>
+
+ServerSignature Off

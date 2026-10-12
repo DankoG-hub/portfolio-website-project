@@ -3,365 +3,625 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <title>Goluza Interface Studio — Web Design </title>
-
-  <meta name="description"
-    content="Goluza Interface Studio — Sci-Fi inspired web design, interfaces, and immersive digital experiences by Danko Goluza.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title>Web Design & AI Solutions in Dublin | Goluza Interface Studio</title>
+
+  <meta
+    name="description"
+    content="Custom web design and practical AI solutions for businesses in Dublin, across Ireland and beyond. Explore services, projects and ways to get started."
+  >
+
   <meta name="author" content="Danko Goluza">
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <!-- Preferred domain -->
+  <link rel="canonical" href="https://dankogoluza.com/">
+
+  <!-- Browser appearance -->
+  <meta name="theme-color" content="#060a12">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/Logo/phoenix-logo.png">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/images/Logo/phoenix-logo.png"
+  >
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IE">
+  <meta property="og:site_name" content="Goluza Interface Studio">
+  <meta
+    property="og:title"
+    content="Web Design & AI Solutions in Dublin | Goluza Interface Studio"
+  >
+  <meta
+    property="og:description"
+    content="Custom web design and practical AI solutions for businesses in Dublin, across Ireland and beyond."
+  >
+  <meta property="og:url" content="https://dankogoluza.com/">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lexend+Giga:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Website and business identity -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dankogoluza.com/#website",
+        "url": "https://dankogoluza.com/",
+        "name": "Goluza Interface Studio",
+        "publisher": {
+          "@id": "https://dankogoluza.com/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dankogoluza.com/#organization",
+        "name": "Goluza Interface Studio",
+        "url": "https://dankogoluza.com/",
+        "logo": "https://dankogoluza.com/assets/images/Logo/phoenix-logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Danko Goluza"
+        }
+      }
+    ]
+  }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style id="homepage-typography">
+  /* Match the About page: Audiowide headings, Lexend reading text. */
+  body :is(p:not(.sub-h1), .about-text, .services-intro, .service-text,
+    .configure-intro, .lexend-text, .projects-intro, .blog-text,
+    .contact-intro, .contact-subtext, .contact-meta, .service-list li) {
+    font-family: "Lexend", system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.75;
+  }
+  body :is(.project-status, .project-card-meta, .log-top,
+    .legal-links, .footer-links li, .contact-form input, .contact-form textarea) {
+    font-family: "Lexend", system-ui, sans-serif;
+  }
+  body :is(h1, h2, h3, h4, h5, h6, .sub-h1,
+    .hud-button, button, .nav-links a, .hero-services, .contact-form label) {
+    font-family: "Audiowide", sans-serif;
+  }
+</style>
 </head>
 
 
 <body>
-  <div id="scanner-cursor"></div>
+  <!-- Decorative interface element -->
+  <div id="scanner-cursor" aria-hidden="true"></div>
 
   <header>
     <div class="logo">
-      <a href="index.html">
-        <img src="./assets/images/Logo/logo-orange.png" alt="Danko Goluzas Logo">
+      <a href="/" aria-label="Goluza Interface Studio homepage">
+        <img
+          src="./assets/images/Logo/logo-orange.png"
+          alt="Goluza Interface Studio logo"
+          decoding="async"
+        >
       </a>
     </div>
-    <nav class="navbar">
-      <span class="nav-tech-layer"></span>
-      <span class="mid-notch"></span>
+
+    <nav class="navbar" aria-label="Primary navigation">
+      <span class="nav-tech-layer" aria-hidden="true"></span>
+      <span class="mid-notch" aria-hidden="true"></span>
 
       <ul class="nav-links" id="navLinks">
-        <li class="homeLink1"><a href="index.html">//Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact<span class="cursor_subSection">_</span></a></li>
+        <li class="homeLink1">
+          <a href="/" aria-current="page">//Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+            <span class="cursor_subSection" aria-hidden="true">_</span>
+          </a>
+        </li>
       </ul>
-      <div class="hamburger" id="hamburger">
-        <span class="bar top-bar"></span>
-        <span class="bar middle-bar"></span>
-        <span class="bar bottom-bar"></span>
+
+      <div
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open navigation menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        role="button"
+        tabindex="0"
+      >
+        <span class="bar top-bar" aria-hidden="true"></span>
+        <span class="bar middle-bar" aria-hidden="true"></span>
+        <span class="bar bottom-bar" aria-hidden="true"></span>
       </div>
     </nav>
 
-    <!--HERO-->
-    <div class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 class="heroH1">GOLUZA INTERFACE STUDIO<br><span class="h1-span glitch" data-text=" //Web Design_">//Web
-            Design<span class="cursor">_</span></span></h1>
-        <a href="#about" class="hud-button glitch-effect hero-btn engage-btn">ENGAGE</a>
-      </div><!--hero-content-->
-    </div><!--hero-->
-  </header>
-  <!--HERO END-->
 
-  <!--ABOUT-->
-  <div class="sub-section1">
-    <span class="hud-dot left"></span> <!-- optional -->
-    <h1 class="sub-h1">//Not Only Pixels. Systems<span class="cursor_subSection">_</span></h1>
-    <span class="hud-dot right"></span> <!-- optional -->
-  </div><!--sub-section1-->
+        <h1 class="heroH1" id="hero-title">
+          GOLUZA INTERFACE STUDIO
 
+          <span class="h1-span hero-services">
+            <span class="hero-service">//WEB DESIGN</span>
 
-  <div class="about" id="about">
-    <div class="row">
-      <div class="about-left">
-        <h2 class="h2-span">//About Me<span class="cursorWhite">_</span></h2><br>
-        <a href="pages/about.html" class="hud-button glitch-effect hero-btn">Check More</a>
-      </div><!--about-left-->
+            <span
+              class="service-separator"
+              aria-hidden="true"
+            >
+              |
+            </span>
 
-      <div class="about-right hud-panel">
-        <div class="hud-panel-header">
-          <span class="">// MAIN CONSOLE_</span>
-          <span class="hud-status">Channel: About</span>
+            <span class="hero-service">AI SOLUTIONS</span>
+          </span>
+        </h1>
+
+        <div class="hero-actions">
+          <a
+            href="#configure"
+            class="hud-button glitch-effect hero-btn"
+          >
+            START A PROJECT
+          </a>
+
+          <a
+            href="#projects"
+            class="hud-button glitch-effect hero-btn"
+          >
+            VIEW PROJECTS
+          </a>
         </div>
 
-        <h2 class="about-heading">
-          <span class="h1-span">Web Designer | Sci-Fi Enthusiast <span class="cursor"></span></span>
-        </h2>
+      </div>
+    </section>
+    <!-- HERO END -->
+  </header>
 
-        <p class="about-text">
-          I’m Danko — a web designer and creator of immersive digital experiences.<br>
-          I don’t just design websites — I redesign experiences and build AI-powered systems that support real
-          workflows.<br>
-          Inspired by space, signal, and interface — this site is a portal into my skills, mindset, and vision.
-        </p>
+  <!--ABOUT-->
+<div class="sub-section1">
+  <span class="hud-dot left" aria-hidden="true"></span>
+  <p class="sub-h1">// Not only pixels. Systems<span class="cursor_subSection" aria-hidden="true">_</span></p>
+  <span class="hud-dot right" aria-hidden="true"></span>
+</div><!--sub-section1-->
 
-        <!--<p class="about-text about-emphasis">
-          <em>Want to know how I build from the void? Check more<span class="cursorWhite">_</span></em>
-        </p>-->
-      </div><!--about-right-->
 
-    </div><!--row-->
-  </div><!--about-->
-  <!--ABOUT END-->
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="row">
 
-  <!--PROJECTS-->
+    <div class="about-left">
+      <h2 class="h2-span" id="about-title">//About Me<span class="cursorWhite" aria-hidden="true">_</span></h2>
+      <a href="/pages/about.html" class="hud-button glitch-effect hero-btn" aria-label="Learn more about Danko Goluza and Goluza Interface Studio">ACCESS PROFILE</a>
+    </div><!--about-left-->
 
-  <!-- <div class="sub-section1">
-    <span class="hud-dot left"></span> 
-    <h1 class="sub-h1">//System Integrity. Precision_<span class="cursor_subSection">_</span></h1>
-    <span class="hud-dot right"></span> 
-  </div>-->
-
-  <!-- SUB-SECTION: SERVICES LABEL (optional) -->
-  <div class="sub-section1 sub-section-services">
-    <h1 class="sub-h1">//Systems & Services<span class="cursor_subSection">_</span></h1>
-  </div>
-  <!-- SUB-SECTION END -->
-
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <div class="services-inner">
-
-      <div class="services-header">
-        <span class="services-tag">//SERVICE MATRIX_</span>
-        <p class="services-intro">
-          Focused, modular offerings — built to plug directly into your stack.
-        </p>
+    <div class="about-right hud-panel">
+      <div class="hud-panel-header">
+        <span>// MAIN CONSOLE_</span>
+        <!--<span class="hud-status">Channel: About</span>-->
       </div>
 
-      <div class="services-grid">
-        <!-- 1. Web & UX systems -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//01</span>
-            <h3 class="service-title">Web & UX Systems</h3>
-          </div>
-          <p class="service-text">
-            Custom, hand-coded websites built as complete user systems — clean, intuitive, and performance-focused to
-            guide users from entry to action.
-          </p>
-          <ul class="service-list">
-            <li>Custom layouts, no templates</li>
-            <li>UX-driven structure, content hierarchy & readability</li>
-            <li>Responsive, mobile-first builds</li>
-            <li>Performance-minded front-end development</li>
-            <li>Deployment & basic hosting setup</li>
-          </ul>
-        </article>
+      <h3 class="about-heading">
+        <span class="h1-span">WEB DESIGN | AI SOLUTIONS<span class="cursor" aria-hidden="true"></span></span>
+      </h3>
 
-        <!-- 2. Client Intake -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//02</span>
-            <h3 class="service-title">Client Intake</h3>
-          </div>
-          <p class="service-text">
-            Client intake systems that structure leads, automate responses, and guide visitors to the right next step.
-          </p>
-          <ul class="service-list">
-            <li>Custom client intake & qualification flows</li>
-            <li>Automated lead delivery to email, sheets, and internal dashboards</li>
-            <li>Smart follow-ups, confirmations & branded HTML emails</li>
-            <li>Conversion-focused UX from first click to next step</li>
-            <li>Built to scale into AI-assisted workflows</li>
-          </ul>
-        </article>
+      <p class="about-text">
+        I’m Danko, founder of Goluza Interface Studio in Dublin. I design and develop modern websites, practical AI solutions and digital experiences for businesses, combining performance, usability and a strong visual identity.
+      </p>
+    </div><!--about-right-->
 
-        <!-- 3. SEO Foundations -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//03</span>
-            <h3 class="service-title">SEO Foundations</h3>
-          </div>
-          <p class="service-text">
-            Solid technical basics so your site can actually be found.
-          </p>
-          <ul class="service-list">
-            <li>Clean semantic HTML structure</li>
-            <li>Meta titles & descriptions</li>
-            <li>Alt text & accessibility basics</li>
-            <li>Performance tweaks that help ranking</li>
-          </ul>
-        </article>
+  </div><!--row-->
+</section><!--about-->
+<!--ABOUT END-->
 
-        <!-- 4. Branding & Visual Systems -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//04</span>
-            <h3 class="service-title">Branding & Systems</h3>
-          </div>
-          <p class="service-text">
-            From logo to layout rules — a small but coherent system behind your visuals.
-          </p>
-          <ul class="service-list">
-            <li>Logo & mark concepts</li>
-            <li>Color & typography system</li>
-            <li>Basic brand usage rules</li>
-            <li>Visual direction for future assets</li>
-          </ul>
-        </article>
+<!--SERVICES-->
 
-        <!-- 5. AI Assistant Integration -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//05</span>
-            <h3 class="service-title">AI Assistants</h3>
-          </div>
-          <p class="service-text">
-            Guided, on-brand chat experiences that help visitors find what they need.
-          </p>
-          <ul class="service-list">
-            <li>Conversation flow planning</li>
-            <li>FAQ & content mapping</li>
-            <li>Integration of an assistant into the site</li>
-            <li>Tone aligned with the client’s brand</li>
-          </ul>
-        </article>
+<!-- SUB-SECTION: SERVICES LABEL -->
+<div class="sub-section1 sub-section-services">
+  <h2 class="sub-h1" id="services-title">//SERVICES<span class="cursor_subSection" aria-hidden="true">_</span></h2>
+</div>
+<!-- SUB-SECTION END -->
 
-        <!-- 6. addition -->
-        <article class="service-card">
-          <div class="service-card-header">
-            <span class="service-label">//06</span>
-            <h3 class="service-title">Mapping & Strategy</h3>
-          </div>
-          <p class="service-text">
-            High-clarity sessions where we explore your goals, decode your ideas,
-            and translate them into a focused digital direction.
-          </p>
-          <ul class="service-list">
-            <li>1:1 guided brainstorming</li>
-            <li>Clarifying goals, message & target users</li>
-            <li>Turning abstract ideas into structured steps</li>
-            <li>Creative exploration & story shaping</li>
-            <li>UX direction & early concept sketching</li>
-            <li>Strategic motivation & alignment</li>
-          </ul>
-        </article>
-      </div>
 
-      <!-- <div class="services-cta">
-        <a href="#contact" class="hud-button glitch-effect engage-btn">
-          Configure Your Project
-        </a>
-      </div>-->
+<!-- SERVICES -->
+<section id="services" class="services" aria-labelledby="services-title">
+  <div class="services-inner">
 
+    <div class="services-header">
+      <span class="services-tag">//SERVICE MATRIX_</span>
+      <p class="services-intro">
+        Here’s a closer look at what I can help with, from designing and building your website to improving its performance, capturing enquiries and introducing practical AI solutions.
+      </p>
     </div>
-  </section>
-  <!-- SERVICES END -->
 
+    <div class="services-grid">
+
+      <!-- 1. Web & UX Systems -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//01</span>
+          <h3 class="service-title">Web &amp; UX Systems</h3>
+        </div>
+
+        <p class="service-text">
+          Custom, high-performance websites designed to support your business goals through intuitive UX, fast loading and clean development.
+        </p>
+
+        <ul class="service-list">
+          <li>Custom layouts without generic templates</li>
+          <li>User-focused UX and content structure</li>
+          <li>Responsive, mobile-first development</li>
+          <li>Performance and accessibility optimisation</li>
+          <li>Deployment and hosting support</li>
+        </ul>
+      </article>
+
+      <!-- 2. Client Intake -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//02</span>
+          <h3 class="service-title">Client Intake Systems</h3>
+        </div>
+
+        <p class="service-text">
+          Lead capture systems that organise enquiries, streamline communication and help turn website visitors into qualified prospects.
+        </p>
+
+        <ul class="service-list">
+          <li>Lead capture and qualification flows</li>
+          <li>Automated email and enquiry management</li>
+          <li>Smart follow-ups and branded responses</li>
+          <li>Conversion-focused user journeys</li>
+          <li>AI-assisted workflow preparation</li>
+        </ul>
+      </article>
+
+      <!-- 3. Technical SEO -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//03</span>
+          <h3 class="service-title">Technical SEO</h3>
+        </div>
+
+        <p class="service-text">
+          Technical SEO foundations that help search engines understand your website while improving visibility, performance and usability.
+        </p>
+
+        <ul class="service-list">
+          <li>Semantic HTML and heading structure</li>
+          <li>Metadata, canonical URLs and Open Graph</li>
+          <li>Sitemaps and search engine crawling setup</li>
+          <li>Accessibility and image optimisation</li>
+          <li>Performance and Core Web Vitals</li>
+        </ul>
+      </article>
+
+      <!-- 4. Brand Identity -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//04</span>
+          <h3 class="service-title">Brand Identity</h3>
+        </div>
+
+        <p class="service-text">
+          A consistent visual identity that helps your business feel recognisable, professional and connected across its digital presence.
+        </p>
+
+        <ul class="service-list">
+          <li>Logo and brand concepts</li>
+          <li>Colour and typography systems</li>
+          <li>Brand guidelines</li>
+          <li>Visual direction for future assets</li>
+        </ul>
+      </article>
+
+      <!-- 5. AI Integration -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//05</span>
+          <h3 class="service-title">AI Integration</h3>
+        </div>
+
+        <p class="service-text">
+          Practical AI integrations that improve website interactions, support common customer questions and simplify selected workflows.
+        </p>
+
+        <ul class="service-list">
+          <li>AI chatbot experiences</li>
+          <li>Workflow assistance and automation</li>
+          <li>Business knowledge assistants</li>
+          <li>Custom website integrations</li>
+          <li>Scalable solution planning</li>
+        </ul>
+      </article>
+
+      <!-- 6. Mapping & Strategy -->
+      <article class="service-card">
+        <div class="service-card-header">
+          <span class="service-label" aria-hidden="true">//06</span>
+          <h3 class="service-title">Mapping &amp; Strategy</h3>
+        </div>
+
+        <p class="service-text">
+          Collaborative strategy sessions that turn an early idea or business requirement into a clear digital solution and practical project roadmap.
+        </p>
+
+        <ul class="service-list">
+          <li>One-to-one discovery and strategy sessions</li>
+          <li>Business goals and user mapping</li>
+          <li>Project planning and feature definition</li>
+          <li>UX direction and concept development</li>
+          <li>Action roadmap and recommended next steps</li>
+        </ul>
+      </article>
+
+    </div><!--services-grid-->
+
+  </div><!--services-inner-->
+</section>
+<!--SERVICES END-->
+  
+  
   <!-- ================================= -->
   <!-- 🛰 CONFIGURE YOUR PROJECT SECTION -->
   <!-- ================================= -->
 
-  <section id="configure" class="configure-section">
+  <section id="configure" class="configure-section" aria-labelledby="configure-title">
 
-    <div class="configure-header">
-      <h2 class="hud-title">//CONFIGURE YOUR PROJECT_</h2>
-      <p class="configure-intro">
-        Not sure what you need? Choose your main goal below to see a tailored service package.
-      </p>
-    </div>
+  <div class="configure-header">
+    <h2 class="hud-title" id="configure-title">//START YOUR PROJECT_</h2>
+    <p class="configure-intro">
+      Choose the type of website or AI project you need. Each option opens a focused questionnaire so I can understand your goals, requirements and recommended next steps.
+    </p>
+  </div>
 
-    <!-- CONFIGURE CARDS  -->
-    <div class="configure-cards">
+  <!-- CONFIGURE CARDS -->
+  <div class="configure-cards">
 
-      <div class="orbit-choice-card">
-        <div class="card-upper">
-          <h3 class="audiowide-heading">Need a Website</h3>
-        </div>
-
-        <div class="card-body">
-          <p class="lexend-text">
-            Build a clear, modern website from scratch
-          </p>
-          <a href="https://forms.gle/a9t83Rd6h1cspYpo7" target="_blank" rel="noopener noreferrer">
-            <button class="orbit-proceed-btn">
-              PROCEED
-            </button>
-          </a>
-        </div>
+    <!-- WEBSITE REQUEST -->
+    <article class="orbit-choice-card" aria-labelledby="website-request-title">
+      <div class="card-upper">
+        <h3 class="audiowide-heading" id="website-request-title">Need a Website</h3>
       </div>
 
-      <div class="orbit-choice-card">
-        <div class="card-upper">
-          <h3 class="audiowide-heading">Need a Redesign</h3>
-        </div>
+      <div class="card-body">
+        <p class="lexend-text">
+          Custom website design and development for businesses that need a professional, responsive online presence built from the ground up.
+        </p>
 
-        <div class="card-body">
-          <p class="lexend-text">
-            Realign your existing site with your goals and ambitions
-          </p>
-          <a href="https://forms.gle/ss3RYwFH4PYrzfJY7" target="_blank" rel="noopener noreferrer">
-            <button class="orbit-proceed-btn">
-              PROCEED
-            </button>
-          </a>
-        </div>
+        <a href="https://forms.gle/a9t83Rd6h1cspYpo7" class="project-config-btn orbit-proceed-btn" data-package="Website Development" target="_blank" rel="noopener noreferrer" aria-label="Open the website project questionnaire in a new tab">
+          PROCEED
+        </a>
+      </div>
+    </article>
+
+    <!-- REDESIGN REQUEST -->
+    <article class="orbit-choice-card" aria-labelledby="redesign-request-title">
+      <div class="card-upper">
+        <h3 class="audiowide-heading" id="redesign-request-title">Need a Redesign</h3>
       </div>
 
-      <div class="orbit-choice-card">
-        <div class="card-upper">
-          <h3 class="audiowide-heading">Need AI</h3>
-        </div>
+      <div class="card-body">
+        <p class="lexend-text">
+          Modernise your existing website with improved design, mobile usability, performance and a clearer user experience.
+        </p>
 
-        <div class="card-body">
-          <p class="lexend-text">
-            Add a smart assistant to guide visitors automatically.
-          </p>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <button class="orbit-proceed-btn">
-              PROCEED
-            </button>
-          </a>
-        </div>
+        <a href="https://forms.gle/ss3RYwFH4PYrzfJY7" class="project-config-btn orbit-proceed-btn needAI-btn" data-package="Redesign Request" target="_blank" rel="noopener noreferrer" aria-label="Open the website redesign questionnaire in a new tab">
+          PROCEED
+        </a>
+      </div>
+    </article>
+
+    <!-- AI REQUEST -->
+    <article class="orbit-choice-card" aria-labelledby="ai-request-title">
+      <div class="card-upper">
+        <h3 class="audiowide-heading" id="ai-request-title">Need AI</h3>
       </div>
 
-      <div class="orbit-choice-card">
-        <div class="card-upper">
-          <h3 class="audiowide-heading">Website + AI</h3>
-        </div>
+      <div class="card-body">
+        <p class="lexend-text">
+          Explore practical AI solutions that can support customer communication, simplify selected tasks and improve existing digital workflows.
+        </p>
 
-        <div class="card-body"> <!-- 👉 flex grow area -->
-          <p class="lexend-text">
-            Full system: custom website + AI-driven interaction layer
-          </p>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <button class="orbit-proceed-btn">
-              PROCEED
-            </button>
-          </a>
-        </div>
+        <a href="https://forms.gle/JoEeEXVHdT8zEPxXA" class="project-config-btn orbit-proceed-btn" data-package="AI Request" target="_blank" rel="noopener noreferrer" aria-label="Open the AI solutions project questionnaire in a new tab">
+          PROCEED
+        </a>
+      </div>
+    </article>
+
+    <!-- WEBSITE AND AI REQUEST -->
+    <article class="orbit-choice-card" aria-labelledby="website-ai-request-title">
+      <div class="card-upper">
+        <h3 class="audiowide-heading" id="website-ai-request-title">Website + AI</h3>
       </div>
 
-    </div>
-  </section>
+      <div class="card-body">
+        <p class="lexend-text">
+          Build a complete digital platform combining custom web design, practical AI integrations and smarter client-facing workflows.
+        </p>
+
+        <a href="https://forms.gle/4rZ6YgwpLtcgMVcu8" class="project-config-btn orbit-proceed-btn" data-package="Web + AI Request" target="_blank" rel="noopener noreferrer" aria-label="Open the website and AI project questionnaire in a new tab">
+          PROCEED
+        </a>
+      </div>
+    </article>
+
+  </div><!--configure-cards-->
+
+</section><!--configure-section-->
+   <!-- ================================= -->
+  <!-- 🛰 CONFIGURE YOUR PROJECT SECTION END-->
+  <!-- ================================= -->
 
 
-  <div class="projects" id="projects">
+  <!-- ================================= -->
+        <!-- 🛰 PROJECTS SECTION -->
+  <!-- ================================= -->
+   <div class="projects" id="projects">
     <div class="projects-inner">
       <h2><span class="h1-span">//PROJECTS<span class="cursor">_</span></span></h2>
 
-      <p>
-        This is where the work lives — crafted in quiet hours, fueled by coffee, curiosity, and a vision for better
-        digital spaces.
-        Designs, code, experiments… archived here for exploration. Some are complete missions. Others are still
-        orbiting.
-        <br><br>
-        Access granted — take a look.
-      </p>
+      <p class="projects-intro">
+      Here are some of the websites and digital projects I’ve designed and built.<br>
+      Dive into each case study to discover the ideas, decisions and steps that shaped the final result.
+    </p>
+    
+        <div class="featured-projects">
 
-      <a href="pages/projects.html" class="hud-button glitch-effect projects-btn">Check More</a>
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-card-image">
+          <img
+            src="/assets/images/ivans-bg-portfolio1.png?v=20260911"
+            alt="IVANS immigration services website displayed on desktop and mobile devices"
+            width="1200"
+            height="800"
+            loading="lazy"
+          >
+
+          <span class="project-status">STATUS: LIVE</span>
+        </div>
+
+        <div class="project-card-content">
+          <div class="project-card-meta">
+            <span>//01</span>
+            <span>CONSULTING</span>
+          </div>
+
+          <h3>IVANS.ie</h3>
+
+          <p>
+            A responsive immigration services platform built to help visitors find the right information and take the next step.
+          </p>
+
+          <a
+            href="pages/ivansPortfolio.html"
+            class="project-card-btn"
+            aria-label="View the IVANS project"
+          >
+            VIEW PROJECT
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-card-image">
+          <img
+            src="/assets/images/doko-web-bg.png?v=20260911"
+            alt="Doko Građenje construction company website"
+            width="1200"
+            height="800"
+            loading="lazy"
+          >
+
+          <span class="project-status">STATUS: LIVE</span>
+        </div>
+
+        <div class="project-card-content">
+          <div class="project-card-meta">
+            <span>//02</span>
+            <span>CONSTRUCTION</span>
+          </div>
+
+          <h3>Doko Građenje</h3>
+
+          <p>
+            A large-scale construction portfolio presenting services,
+            completed projects, partners, and company expertise.
+          </p>
+
+          <a
+            href="pages/dokoPortfolio.html"
+            class="project-card-btn"
+            aria-label="View the Doko Građenje project"
+          >
+            VIEW PROJECT
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-card-image">
+          <img
+            src="/assets/images/google-logo.png?v=20260911"
+            alt="Goluza Interface Studio futuristic portfolio interface"
+            width="1200"
+            height="800"
+            loading="lazy"
+          >
+
+          <span class="project-status project-status--active">
+            ACTIVE DEVELOPMENT
+          </span>
+        </div>
+
+        <div class="project-card-content">
+          <div class="project-card-meta">
+            <span>//03</span>
+            <span>PORTFOLIO</span>
+          </div>
+
+          <h3>Goluza Interface Studio</h3>
+
+          <p>
+            A NASA-punk portfolio environment combining custom design,
+            interactive UX, and future AI-system concepts.
+          </p>
+
+          <a
+            href="pages/myPortfolio.html"
+            class="project-card-btn"
+            aria-label="View the Goluza Interface Studio project"
+          >
+            VIEW PROJECT
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+      <a href="pages/projects.html" class="hud-button glitch-effect projects-btn">ACCESS ARCHIVE</a>
     </div>
   </div>
-
   <!--PROJECTS END-->
 
-  <!--<div class="data-terminal">
+ <!--
+     <div class="data-terminal">
     <div class="terminal-header">// LOG FEED ACTIVE</div>
     <ul class="log-output" id="log-output">
       <li>LOG COMPLETE_</li>
@@ -374,10 +634,11 @@
       <li> >Mission Control: GitHub </li>
       <li>> Interface closed at 18:02 UTC — Sector 23-A (Earth)</li>
     </ul>
-  </div>-->
+  </div>
+ -->
 
   <div class="sub-section1">
-    <h1 class="sub-h1">//Each line of code is a signal — a construct from nothing, turning void into function, thought
+    <h1 class="sub-h1">//Each line of code is a signal, a construct from nothing, turning void into function, thought
       into form<span class="cursor_subSection">_</span></h1>
   </div>
 
@@ -386,16 +647,90 @@
     <div class="row">
       <div class="blog-left hud-panel">
         <h2><span class="h1-span blogSpan">//Dev Feed<span class="cursor">_</span></span></h2>
-        <p class="about-text">
+        <p>
           More than code. More than pixels.<br>
-          This log collects reflections, experiments, and system thoughts — from
-          design dilemmas to dev epiphanies, from personal growth to productivity hacks.<br>
-          Access granted for explorers, builders, and curious minds.</p>
+          This is where I document projects, experiments, ideas, and the lessons learned while building websites, AI systems, and digital experiences.
+          A place for builders, curious minds, and anyone interested in the process.</p>
       </div><!--blog-left-->
-      <div class="blog-right">
+      
+      <div class="dev-feed-grid">
+
+  <!-- LOG 001 -->
+  <article class="log-card">
+
+    <div class="log-top">
+      <span>LOG 001</span>
+      <span>STATUS: Coming soon</span>
+    </div>
+
+    <h3>Building Goluza Interface Studio</h3>
+
+    <p>
+      The story behind the studio, the vision that started it, and the lessons learned along the way. Why I chose to build digital systems instead of ordinary websites.
+    </p>
+
+    <a href="#"
+      class="log-btn">
+      READ LOG →
+    </a>
+
+  </article>
+
+  <!-- LOG 002 -->
+  <article class="log-card">
+
+    <div class="log-top">
+      <span>LOG 002</span>
+      <span>STATUS: Coming soon</span>
+    </div>
+
+    <h3>Designing Better Client Experiences</h3>
+
+    <p>
+     Thoughts on usability, communication, and building websites that feel simple to use. Small decisions that help people find what they need without frustration.
+    </p>
+
+    <a href="#"
+      class="log-btn">
+      READ LOG →
+    </a>
+
+  </article>
+
+  <!-- LOG 003 -->
+  <article class="log-card">
+
+    <div class="log-top">
+      <span>LOG 003</span>
+      <span>STATUS: Coming soon</span>
+    </div>
+
+    <h3>The Worlds That Shaped My Design</h3>
+
+    <p>
+     The films, music, games, architecture, and ideas that continue to shape my work. Take a look at the inspirations behind the visual identity of the studio.
+    </p>
+
+    <a href="#"
+      class="log-btn">
+      READ LOG →
+    </a>
+
+  </article>
+
+</div>
+
+<div class="logs-button">
+    <a href="#"
+       class="hud-button glitch-effect">
+       ACCESS LOG ARCHIVE
+    </a>
+</div>
+      
+      <!--<div class="blog-right">
         <h2 class="h2-span">//Blog<span class="cursorWhite">_</span></h2><br>
         <a href="pages/blog.html" class="hud-button glitch-effect">Check More</a>
-      </div><!--blog-right-->
+      </div>-->
     </div><!--row-->
   </div><!--blog-->
   <!--BLOG END-->
@@ -415,9 +750,10 @@
       <h2><span class="h1-span contact-h2">//Communication Uplink<span class="cursor">_</span></span></h2>
 
       <p class="contact-intro">
-        Brief me on your project, idea, or problem. <br>I usually respond within 24–48 hours.</p>
+        Book a one-to-one video consultation via Google Meet to discuss your project, challenge, or idea.<br>
+        Choose a suitable time and I’ll review the details personally before our call.</p>
 
-      <!-- <div class="uplink-modes">
+      <!--<div class="uplink-modes">
         <span class="mode active">// Live Uplink: Call</span>
         <span class="mode">// Text Transmission</span>
       </div>-->
@@ -425,15 +761,16 @@
       <div class="contact-intro-actions">
         <a href="#" class="hud-button glitch-effect engage-btn" data-cal-link="goluza-interface-studio/20min"
           data-cal-namespace="20min" data-cal-config='{"layout":"month_view"}'>
-          //BOOK UPLINK SESSION
+          //BOOK VIDEO SESSION
+            
         </a>
 
-        <p class="contact-subtext">Prefer text transmission? Continue below:</p>
+        <p class="contact-subtext">Or send a direct transmission:</p>
       </div>
 
       <div class="data-terminal contact-data-terminal">
         <div class="terminal-header">//TRANSMISSION READY<span class="cursor">_</span></div>
-        <form class="contact-form" action="mailto:info@dankogoluza.com" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/meebpeyl" method="POST">
           <div class="form-group">
             <label for="name">// Name<span class="cursor">_</span></label>
             <input type="text" id="name" name="name" required placeholder="Enter your callsign">
@@ -454,12 +791,12 @@
       </div><!--data terminal contact form-->
 
       <p class="contact-meta">
-        <span>// Location: Dublin, Ireland</span>
+        <span>// Operating from: Dublin, Ireland</span>
         <span>// Direct Channel: <a href="mailto:info@dankogoluza.com">info@dankogoluza.com</a></span>
       </p>
       <p class="contact-meta small">
         By sending this transmission you agree that your data will be used to respond to your inquiry.
-        See <a href="privacy-policy.html">Privacy Policy</a>.
+        See <a href="../privacy-policy.html">Privacy Policy</a>.
       </p>
 
     </div><!--contact-row-->
@@ -469,20 +806,29 @@
   <!--FOOTER-->
 
   <div class="sub-section1">
-    <h1 class="sub-h1">//Follow me on: [GitHub]_ [Linkdin]_ [Insta]<span class="cursor_subSection">_</span></h1>
+    <h1 class="sub-h1">
+  //Explore: 
+  [<a href="pages/projects.html">Projects</a>]_
+  [<a href="https://www.linkedin.com/in/danko-goluza/"
+      target="_blank"
+      rel="noopener noreferrer">LinkedIn</a>]_
+  [<a href="https://www.instagram.com/YOUR-USERNAME/"
+      target="_blank"
+      rel="noopener noreferrer">Insta</a>
+  ]<span class="cursor_subSection">_</span>
+</h1>
   </div><!--sub-section1-->
 
   <!--FOOTER-->
   <div class="footer">
     <span class="h1-span glitch" data-text=" //You’ve made it to the end... but this isn’t the last
-      signal_">//You’ve made it to the end... but this isn’t the last
+      signal_">//You’ve made it to the end... <br>but this isn’t the last
       signal<span class="cursor">_</span>
-      </h2>
   </div><!--footer-->
 
   <button id="backToTop" class="hud-button back-to-top glitch-effect">//↑<span class="cursor">_</span></button>
-
-  <!-- Chat bubble -->
+  
+   <!-- Chat bubble -->
   <button class="gis-chat-toggle" aria-label="Open chat">
     <div class="gis-chat-icon">
       <span class="gis-energy-ring"></span>
@@ -508,7 +854,7 @@
         </div>
         <div>
           <div class="gis-chat-title">Goluza Interface Assistant</div>
-          <div class="gis-chat-subtitle">Web • UX • Design Systems</div>
+          <div class="gis-chat-subtitle">WEB DESIGN | AI SOLUTIONS</div>
         </div>
       </div>
       <button class="gis-chat-close" aria-label="Close chat">×</button>
@@ -518,37 +864,47 @@
       <!-- messages will be injected here -->
     </div>
 
-    <form class="gis-chat-input-row">
-      <input type="text" placeholder="Ask me about services, pricing, or process…" />
+    <p id="gis-chat-privacy" style="flex-shrink:0;margin:0;padding:10px 14px;color:#b8c0ce;background:#0a0e16;border-top:1px solid #303847;font-family:'Lexend',system-ui,sans-serif;font-size:12px;font-weight:300;line-height:1.5;letter-spacing:normal;text-align:left;">Please don’t share passwords, private credentials, or sensitive personal, legal, financial, medical, or confidential information here.</p>
+    <form class="gis-chat-input-row" aria-describedby="gis-chat-privacy">
+      <input type="text" aria-describedby="gis-chat-privacy" placeholder="Ask about services, projects or pricing…" />
       <button type="submit">➤</button>
     </form>
   </div>
 
+  <style id="gis-shared-footer">
+html body .site-footer.gis-footer-end { background:#111; color:#aaa; padding:20px; text-align:center; border:0; border-top:1px solid #222; font-family:"Lexend",sans-serif; }
+html body .site-footer.gis-footer-end p { margin:1em 0; color:#aaa; font-family:"Lexend",sans-serif; font-size:16px; font-weight:400; line-height:1.75; letter-spacing:normal; }
+html body .legal-links.gis-footer-legal { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:14px; padding:18px 20px; background:#0d0d0d; border-top:1px solid #ff7e1b26; border-bottom:1px solid #ff7e1b26; font-family:"Lexend",sans-serif; font-size:.78rem; letter-spacing:1px; }
+html body .legal-links.gis-footer-legal a { color:#bdbdbd; font-family:"Lexend",sans-serif; font-size:inherit; font-weight:500; letter-spacing:inherit; text-decoration:none; }
+html body .legal-links.gis-footer-legal a:hover { color:#ff7e1b; }
+html body .legal-links.gis-footer-legal span { color:#ff7e1b80; }
+html body .footer-links.gis-footer-credit { display:flex; align-items:center; justify-content:center; padding:0; color:#000; background: url('/assets/images/body-bg2.png') no-repeat center center; }
+html body .footer-links.gis-footer-credit ul { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:center; gap:0 .35em; margin:1em 0; padding:0 20px; list-style:none; }
+html body .footer-links.gis-footer-credit li { display:inline-block; font-family:"Lexend",sans-serif; font-size:16px; font-weight:400; line-height:normal; letter-spacing:normal; color:#000; }
+html body .footer-links.gis-footer-credit .gis-footer-brand { font-family:"Audiowide",sans-serif; }
+</style>
 
+    <footer class="site-footer gis-footer-end">
+      <p>// CONNECTION TERMINATED_</p>
+      <p class="blink">Awaiting next log...</p>
+    </footer>
+    <nav class="legal-links gis-footer-legal" aria-label="Legal">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <span aria-hidden="true">//</span>
+      <a href="/pages/terms.html">Terms of Use</a>
+      <span aria-hidden="true">//</span>
+      <a href="/pages/cookie-policy.html">Cookie Policy</a>
+    </nav>
+    <div class="footer-links gis-footer-credit">
+      <ul>
+        <li>© 2026</li>
+        <li class="gis-footer-brand">Goluza Interface Studio_</li>
+        <li>//All Rights Reserved_</li>
+      </ul>
+    </div>
+    <!--FOOTER END-->
 
-  <footer class="site-footer">
-    <p>// CONNECTION TERMINATED_</p>
-    <p class="blink">Awaiting next log...</p>
-  </footer>
-
-  <!-- LEGAL LINKS ROW -->
-  <div class="legal-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-    <a href="cookies.html">Cookie Policy</a>
-    <a href="imprint.html">Imprint</a>
-  </div>
-
-  <div class="footer-links">
-    <ul>
-      <li>© 2025</li>
-      <li>Goluza Interface Studio_</li>
-      <li>//All Rights Reserved_</li>
-    </ul>
-  </div>
-  <!--FOOTER END-->
-
-  <script src="js/main.js" async defer></script>
+  <script src="/js/main.js?v=20261006-chat-privacy"></script>
 
   <!-- Fullscreen glitch overlay -->
   <div class="screen-glitch" id="screenGlitch">
@@ -556,6 +912,26 @@
     <div class="glitch-layer layer2"></div>
     <div class="glitch-layer layer3"></div>
   </div>
+  
+  <div class="scan-overlay" id="scanOverlay" aria-hidden="true">
+  <div class="scan-terminal" role="status" aria-live="polite">
+    <p class="scan-label">SCANNING CONFIGURATION...</p>
+
+    <div class="scan-progress" aria-hidden="true">
+      <span class="scan-progress__bar" id="scanProgressBar"></span>
+    </div>
+
+    <p class="scan-result" id="scanResult">
+      PACKAGE DETECTED
+    </p>
+
+    <p class="scan-package" id="scanPackage"></p>
+
+    <p class="scan-status">
+      OPENING CLIENT INTAKE_
+    </p>
+  </div>
+</div>
 
 
   <!-- Cal element-click embed code begins -->
@@ -604,7 +980,74 @@
       });
     });
   </script>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const configButtons = document.querySelectorAll(".project-config-btn");
 
+  const scanOverlay = document.getElementById("scanOverlay");
+  const scanPackage = document.getElementById("scanPackage");
+  const scanProgressBar = document.getElementById("scanProgressBar");
+
+  let redirectTimer;
+
+  function resetOverlay() {
+    clearTimeout(redirectTimer);
+
+    scanOverlay.classList.remove("is-active");
+    scanOverlay.setAttribute("aria-hidden", "true");
+
+    scanProgressBar.style.animation = "";
+
+    document.body.style.overflow = "";
+  }
+
+  configButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const destination = button.getAttribute("href");
+      const packageName =
+        button.dataset.package || "Digital Solution";
+
+      if (!destination) {
+        console.error("Project configuration link has no destination.");
+        return;
+      }
+
+      clearTimeout(redirectTimer);
+
+      scanPackage.textContent = `> ${packageName}`;
+
+      // Restart the scanning animation.
+      scanOverlay.classList.remove("is-active");
+      scanProgressBar.style.animation = "none";
+
+      // Force the browser to restart the animation.
+      void scanOverlay.offsetWidth;
+
+      scanProgressBar.style.animation = "";
+      scanOverlay.classList.add("is-active");
+      scanOverlay.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+
+      redirectTimer = setTimeout(() => {
+        // Reset the page before leaving.
+        scanOverlay.classList.remove("is-active");
+        scanOverlay.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+
+        // Same-tab navigation works reliably on mobile.
+        window.location.assign(destination);
+      }, 3000);
+    });
+  });
+
+  // Reset the overlay when returning with the browser's Back button.
+  window.addEventListener("pageshow", resetOverlay);
+});
+</script>
 
 
 

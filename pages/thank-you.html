@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+<meta name="robots" content="noindex, follow">
+  <title>Transmission Received | Goluza Interface Studio</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body.thank-you-page {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      color: #e6e6e6;
+      font-family: "Lexend Giga", sans-serif;
+
+      background:
+        linear-gradient(
+          rgba(255, 122, 0, 0.05) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 122, 0, 0.05) 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at top,
+          rgba(0, 140, 255, 0.08),
+          transparent 45%
+        ),
+        #090c11;
+
+      background-size:
+        80px 80px,
+        80px 80px,
+        100% 100%;
+
+      overflow: hidden;
+    }
+
+    body.thank-you-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle,
+          transparent 40%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+    }
+
+    .thank-you-terminal {
+      position: relative;
+      z-index: 1;
+
+      width: min(760px, 100%);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 56px 42px;
+
+      text-align: center;
+
+      background: rgba(8, 12, 17, 0.84);
+      border: 1px solid rgba(255, 122, 0, 0.38);
+
+      box-shadow:
+        0 0 32px rgba(255, 122, 0, 0.12),
+        inset 0 0 28px rgba(0, 120, 255, 0.04);
+    }
+
+    .thank-you-terminal::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+
+      border: 1px dashed rgba(255, 122, 0, 0.16);
+
+      pointer-events: none;
+    }
+
+    .thank-you-status {
+      margin-bottom: 24px;
+
+      color: #ff7a00;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+    }
+
+    .thank-you-terminal h1 {
+      margin-bottom: 28px;
+
+      color: #ffffff;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .thank-you-message {
+      max-width: 620px;
+      margin-bottom: 46px;
+
+      color: #d3d3d3;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    .return-btn {
+      width: min(340px, 100%);
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 auto;
+
+      text-align: center;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      body.thank-you-page {
+        padding: 16px;
+      }
+
+      .thank-you-terminal {
+        padding: 44px 22px;
+      }
+
+      .thank-you-status {
+        font-size: 0.72rem;
+      }
+
+      .thank-you-terminal h1 {
+        margin-bottom: 22px;
+      }
+
+      .thank-you-message {
+        margin-bottom: 36px;
+
+        font-size: 0.92rem;
+        line-height: 1.75;
+      }
+    }
+  </style>
+</head>
+
+<body class="thank-you-page">
+
+  <main class="thank-you-terminal">
+
+    <p class="thank-you-status">
+      // TRANSMISSION RECEIVED_
+    </p>
+
+    <h1>
+      Signal successfully delivered.
+    </h1>
+
+    <p class="thank-you-message">
+      Thank you for reaching out. I’ll review your message personally
+      and usually respond within 24–48 hours.
+    </p>
+
+    <a
+      href="../index.html"
+      class="hud-button glitch-effect return-btn"
+    >
+      RETURN TO COMMAND CENTER
+    </a>
+
+  </main>
+
+</body>
+</html>
