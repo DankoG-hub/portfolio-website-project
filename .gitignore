@@ -1,0 +1,15 @@
+# macOS files
+.DS_Store
+
+# Local secrets
+.env
+.env.*
+*.pem
+*.key
+/goluza-private/
+/goluza-private.zip
+
+# Backups and archives
+/BACKUP/
+/GIS-Hostinger-backup-*/
+*.zip
