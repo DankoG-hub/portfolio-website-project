@@ -1,25 +1,48 @@
-# Intake Forms
+# Goluza Interface Studio — Intake Forms
 
-This document tracks the enquiry/intake forms used by Goluza Interface Studio.
+## 1. Website Project Request
+- **Purpose**: Collect client requirements for new website projects.
+- **Questionnaire structure**: Includes project scope, timeline, and technical preferences.
+- **Privacy integration**: Explicit privacy policy link and reminder at submission.
+- **Google Sheets connection**: Real-time data capture via Google Forms.
+- **Apps Script notification**: Email alerts to team upon form submission.
+- **Current status**: Operational, with plain email layout pending redesign.
 
-## Website Project Request
+## 2. Website Redesign Request
+- **Purpose**: Gather requirements for website redesigns.
+- **Questionnaire structure**: Focuses on current site issues, desired changes, and branding.
+- **Privacy integration**: Privacy policy link and reminder included.
+- **Google Sheets connection**: Integrated with Google Forms for data collection.
+- **Apps Script notification**: Email alerts functional.
+- **Current status**: Operational, with plain email layout pending redesign.
 
-Updated: 2026-10-14
+## 3. AI Solutions Request
+- **Purpose**: Capture client needs for AI-powered tools or integrations.
+- **Questionnaire structure**: Includes use cases, data requirements, and technical constraints.
+- **Privacy integration**: Privacy policy link and reminder included.
+- **Google Sheets connection**: Integrated via Google Forms.
+- **Apps Script notification**: Email alerts functional.
+- **Current status**: Operational, with plain email layout pending redesign.
 
-Purpose:
+## 4. Website + AI Request
+- **Purpose**: Collect requirements for hybrid website-AI projects.
+- **Questionnaire structure**: Combines website and AI solution requirements.
+- **Privacy integration**: Privacy policy link and reminder included.
+- **Google Sheets connection**: Integrated via Google Forms.
+- **Apps Script notification**: Email alerts functional.
+- **Current status**: Operational, with plain email layout pending redesign.
 
-The Website Project Request form is used for clients who need a new website project.
+## Development Log
+### 2026-10-14
+- Initial intake form updates.
 
-Recent updates:
+### 2026-10-15
+- Verified all four intake workflows.
+- Fixed email delivery and permissions.
+- Confirmed successful test submissions.
+- Documented remaining improvements.
 
-- Added privacy policy link near the top of the form.
-- Added privacy policy reminder near the bottom before submission.
-- Added/confirmed contact information fields.
-- Tested Google Forms response collection.
-- Confirmed that default Google Forms notification email is working.
-- Confirmed that Apps Script intake mailer trigger is active.
-- Custom designed email template will be improved later.
-
-Current note:
-
-The Apps Script email notification is working, but the email layout is still plain and will be redesigned later.
+## Future Improvements
+- Standardise HTML email designs.
+- Improve notification formatting.
+- Review privacy and data retention policies.
