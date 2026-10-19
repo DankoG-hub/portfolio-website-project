@@ -1,109 +1,122 @@
-# Goluza Interface Studio — Development Log
+## 2026-10-19 — Cookie Compliance and Analytics Planning
 
-Project: Goluza Interface Studio Website
-Website: https://dankogoluza.com
-Repository: DankoG-hub/portfolio-website-project
+### Development Focus
+
+Continued development and maintenance of the
+Goluza Interface Studio portfolio website.
+
+Today's work focused on website compliance,
+cookie management, and preparation for future
+analytics and advertising integrations.
+
+The objective is to establish a reliable foundation
+for privacy-conscious website analytics, conversion
+measurement, and digital marketing.
+
+### Work Completed
+
+- Reviewed the website's current legal documentation.
+- Confirmed that the Privacy Policy and Terms and
+  Conditions are published.
+- Initiated a website cookie scan through Termly.
+- Investigated initial cookie scanning errors.
+- Reviewed the website's robots.txt configuration.
+- Confirmed that robots.txt permits crawler access.
+- Successfully completed a subsequent cookie scan.
+- Generated an initial Cookie Policy draft.
+- Reviewed the preliminary cookie classifications.
+- Identified additional configuration requirements
+  before completing the consent management setup.
+
+### Technical Observations
+
+The initial cookie scan identified two cookies
+across one scanned page.
+
+Further verification is required to ensure the
+cookie inventory accurately reflects the website's
+technologies and third-party integrations.
+
+The Cookie Policy has been generated but has not
+yet been integrated into the production website.
+
+Google Analytics and advertising measurement
+integrations remain pending.
+
+### Planned Development — Next Session
+
+#### 1. Cookie Inventory Review
+
+- Review cookies identified by Termly.
+- Investigate any unclassified cookies.
+- Verify cookie categories and purposes.
+- Identify additional third-party technologies
+  that may require documentation.
+
+#### 2. Cookie Policy Integration
+
+- Review and publish the Cookie Policy in Termly.
+- Create or update the cookies.html page.
+- Integrate the dynamic Termly policy embed.
+- Apply consistent styling across legal pages.
+- Test the page locally.
+- Deploy the page to Hostinger.
+- Verify the live document.
+
+#### 3. Website Navigation
+
+- Update the Cookie Policy link in the footer.
+- Verify navigation between legal pages.
+- Test relevant links on desktop and mobile.
+
+#### 4. Consent Management
+
+- Configure the Termly consent banner.
+- Review cookie categories and visitor choices.
+- Configure appropriate consent defaults.
+- Install and test the consent management script.
+- Verify that non-essential tracking respects
+  the visitor's consent preferences.
+
+#### 5. Google Integrations
+
+- Review Google Consent Mode v2 implementation.
+- Activate Google Ads tagging when consent
+  management is correctly configured.
+- Integrate Google Analytics 4.
+- Define meaningful website conversion events.
+- Test measurement and consent behaviour.
+- Repeat cookie scanning after implementation.
+
+#### 6. Deployment Workflow Review
+
+- Investigate GitHub integration with Hostinger.
+- Evaluate options for automated deployments.
+- Review production file and directory structure.
+- Ensure internal documentation and development
+  resources remain outside public_html.
+- Maintain separation between development
+  and production environments.
+
+### Development Notes
+
+The implementation will be completed incrementally,
+with testing performed before production deployment.
+
+Priority will be given to maintainability,
+privacy-conscious development, and reliable
+integration of third-party services.
+
+All significant changes will be documented
+and tracked through Git version control.
+
+### Current Status
+
+Privacy Policy: Published
+Terms and Conditions: Published
+Cookie Policy: Generated, integration pending
+Consent Banner: Pending
+Google Analytics: Pending
+Google Ads Conversion Tracking: Pending
 
 ---
-
-## 2026-10-16 — Terms and Conditions Integration
-
-### Objective
-
-Create and integrate a dedicated Terms and Conditions page for Goluza Interface Studio using Termly.
-
-### Completed Work
-
-- Upgraded Termly subscription to Pro+.
-- Generated Terms and Conditions for the business.
-- Configured Irish governing law.
-- Added registered sole-trader business information.
-- Configured contact and business address details.
-- Reviewed the generated legal document.
-- Created a dedicated `terms.html` page.
-- Integrated the Termly policy using its code snippet.
-- Added the Termly policy-loading JavaScript.
-- Created a responsive layout with a centred content area.
-- Confirmed the policy renders correctly in local preview.
-
-### Technical Implementation
-
-File: `terms.html`
-
-Integration method: Termly Code Snippet
-
-The website loads the published Terms and Conditions dynamically using Termly's policy embed.
-
-This allows future updates to the policy through the Termly dashboard without manually replacing the HTML.
-
-### Deployment
-
-- Local testing: Completed
-- Termly publication: Completed
-- Hostinger deployment: Verify
-- Footer navigation: Verify
-- GitHub commit: Pending
-
-### Outstanding Items
-
-- Ask Termly support about sole-trader legal wording.
-- Review intellectual property provisions relating to client enquiry submissions.
-- Review generated data-transfer and liability provisions.
-- Configure the Cookie Policy and consent banner.
-- Review the existing Privacy Policy.
-- Configure Google Ads and Google Analytics with consent controls.
-
----
-
-## 2026-10-17 — Website Documentation and Architecture Review
-
-### Objective
-
-Improve project documentation and establish a clear reference for website maintenance and legal integrations.
-
-### Website Architecture
-
-- Front end: HTML, CSS and JavaScript.
-- Hosting provider: Hostinger.
-- Version control: Git and GitHub.
-- Development environment: Visual Studio Code.
-- Repository: DankoG-hub/portfolio-website-project.
-
-### Legal Documentation
-
-- Privacy Policy: `privacy-policy.html`
-- Terms and Conditions: `terms.html`
-- Cookie Policy: Pending review/integration.
-
-Privacy and legal documents are managed through Termly.
-
-Published policies are embedded into their respective HTML pages, allowing document updates to be managed through the Termly dashboard.
-
-### Development Workflow
-
-1. Modify files locally in VS Code.
-2. Test changes using a local development server.
-3. Review changes with `git status` and `git diff`.
-4. Commit changes to GitHub.
-5. Deploy relevant production files to Hostinger.
-6. Verify changes on the live website.
-
-### Security and Documentation
-
-- Internal development logs remain outside Hostinger.
-- Only production website files are uploaded to `public_html`.
-- Credentials and API keys are excluded from documentation.
-- Client-specific data is kept separate from public repositories.
-
-### Next Steps
-
-- Complete Cookie Policy integration.
-- Configure Termly consent management.
-- Implement Google Analytics 4 and Google Ads tracking with appropriate consent controls.
-- Review legal policy wording with Termly support.
-
----
-
-## Future Development Entries
-
-Add new entries above this section, with the newest updates appearing first.
