@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://dankogoluza.com/</loc>
   </url>
 
+  <!-- Main pages -->
   <url>
     <loc>https://dankogoluza.com/pages/about.html</loc>
   </url>
+
+  <url>
+    <loc>https://dankogoluza.com/pages/projects.html</loc>
+  </url>
+
+  <!-- Portfolio and case studies -->
+  <url>
+    <loc>https://dankogoluza.com/pages/myPortfolio.html</loc>
+  </url>
+
+  <url>
+    <loc>https://dankogoluza.com/pages/dokoPortfolio.html</loc>
+  </url>
+
+  <url>
+    <loc>https://dankogoluza.com/pages/ivansPortfolio.html</loc>
+  </url>
+
+  <url>
+    <loc>https://dankogoluza.com/pages/laTourPortfolio.html</loc>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://dankogoluza.com/privacy-policy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://dankogoluza.com/terms.html</loc>
+  </url>
+
 </urlset>
