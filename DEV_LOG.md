@@ -120,3 +120,42 @@ Google Analytics: Pending
 Google Ads Conversion Tracking: Pending
 
 ---
+
+## 2026-10-21 — Termly Integration and Legal Footer Milestone
+
+### Work Completed
+
+- Integrated the Termly Cookie Policy in cookies.html (0551be3).
+- Added Termly consent management across website pages (9dde4ea).
+- Updated the Privacy Policy with Termly integration (6fb7c25).
+- Corrected legal links to /privacy-policy.html, /terms.html,
+  and /cookies.html on the home, about, and projects pages.
+- Corrected the home page contact Privacy Policy link.
+- Added Cookie Preferences links using termly-display-preferences
+  to the home, about, projects, and three case-study pages.
+- Added case-study legal navigation and matching CSS, including
+  wrapping, link colours, and hover and keyboard-focus styling.
+- Committed and pushed the focused website update as 03d6c2d.
+
+### Validation and Scope
+
+- Reviewed staged differences for exactly the six intended HTML files.
+- Verified legal destinations exist in Git, preference hooks are present,
+  and the existing Termly resource-blocker scripts remain in place.
+- Checked case-study legal CSS against the local intended rules.
+- Passed Git whitespace checks and verified working HTML stayed unchanged.
+- Preserved unrelated local edits and formatting; excluded the local
+  imprint.html and privacy.html deletions from the commit.
+- Kept this development-log update in a separate commit.
+
+### Follow-up
+
+- Verify deployment and test the consent banner and Cookie Preferences
+  interaction in a browser, including desktop and mobile layouts.
+- Confirm non-essential tracking respects consent before enabling
+  analytics or advertising measurement.
+- The unchanged local working copies still contain the duplicate home
+  footer separator and old about/projects privacy paths; preserve the
+  committed corrections when integrating the remaining local changes.
+
+---
