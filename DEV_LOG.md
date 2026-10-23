@@ -1,16 +1,18 @@
-## 2026-10-22 — Google Analytics setup
+## 2026-10-23 — Planning the website completion phase
 
-- Created the Goluza Interface Studio Google Analytics 4 account, property and website data stream.
-- Configured reporting for Ireland with EUR currency.
-- Reviewed Termly settings: Europe and “All other regions” use Basic Google Consent Mode with opt-in consent.
-- Replaced the commented Google Ads block in `index.html` with Analytics scripts controlled by Termly’s analytics consent category.
-- Google detected the tag on the live website.
-- Confirmed incoming data in Realtime: one user, with `page_view`, `session_start` and `first_visit` events.
+Today was a rest day, with no implementation changes. I reviewed the remaining work for Goluza Interface Studio and outlined the next phase: completing measurement, expanding content, and checking the website’s performance and consistency.
 
-### Remaining work
-- Add the consent-controlled Analytics scripts to the other public pages.
-- Verify blocking before consent, after declining, and when accepting analytics only.
-- Configure Google Ads under advertising consent.
-- Trigger the “Request quote” conversion only after a successful enquiry submission.
+### Planned work
 
-Analytics currently runs on the homepage only. Ads tracking and consent verification remain unfinished.
+- Extend the consent-controlled Google Analytics setup to all relevant public pages.
+- Complete Google Ads configuration and track successful enquiries as conversions.
+- Test tracking before consent, after declining, and with individual consent categories selected.
+- Review every page for consistent navigation, footer links, typography and responsive layouts.
+- Create useful blog articles and supporting pages that explain the studio’s services and demonstrate practical experience.
+- Review SEO fundamentals, including titles, descriptions, headings, internal links, canonical URLs, sitemap and indexing.
+- Convert suitable images to WebP, optimise image dimensions and review lazy loading.
+- Check loading speed and usability on mobile and desktop.
+- Review security settings, dependencies, form handling and third-party integrations.
+- Complete a final check for broken links, missing assets and accessibility issues.
+
+The next working session will begin with Analytics coverage and consent testing, followed by Google Ads. These items remain planned work; today’s update records priorities rather than completed implementation.
