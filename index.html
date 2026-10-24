@@ -9,6 +9,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Shared Google tag event queue -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+  </script>
+
+  <!-- Google Analytics: blocked until analytics consent -->
+  <script type="text/plain" data-categories="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-DDKWC0W083"></script>
+
+  <script type="text/plain" data-categories="analytics">
+          gtag('js', new Date());
+        
+          gtag('config', 'G-DDKWC0W083', {
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+          });
+        </script>
+
   <!-- Primary SEO -->
   <title>Web Design & AI Solutions in Dublin | Goluza Interface Studio</title>
 

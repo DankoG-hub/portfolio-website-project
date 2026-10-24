@@ -1,18 +1,22 @@
-## 2026-10-23 — Planning the website completion phase
+## 24 October 2026 — Google Analytics & Google Ads Integration
 
-Today was a rest day, with no implementation changes. I reviewed the remaining work for Goluza Interface Studio and outlined the next phase: completing measurement, expanding content, and checking the website’s performance and consistency.
+**Project:** Goluza Interface Studio — Portfolio Website
 
-### Planned work
+### Completed
+- Verified Google Analytics 4 integration (`G-DDKWC0W083`) using Google Tag Assistant and GA4 Realtime.
+- Confirmed Termly consent behaviour: GA4 records events after Analytics consent is granted, while declined consent prevents Google Analytics scripts and collection requests in our tests.
+- Tested Termly's independent Analytics and Advertising consent preferences.
+- Refactored the homepage's Google tag configuration to use a shared `dataLayer` and `gtag()` function.
+- Confirmed that GA4 remained functional after the initial code changes.
+- Identified the existing Google Ads *Request quote* conversion and reviewed its configuration.
+- Verified the Formspree contact form workflow: successful submission redirects to `pages/thank-you.html`, and test messages arrive in the business inbox.
+- Created a backup of the working homepage outside Hostinger's public directory.
 
-- Extend the consent-controlled Google Analytics setup to all relevant public pages.
-- Complete Google Ads configuration and track successful enquiries as conversions.
-- Test tracking before consent, after declining, and with individual consent categories selected.
-- Review every page for consistent navigation, footer links, typography and responsive layouts.
-- Create useful blog articles and supporting pages that explain the studio’s services and demonstrate practical experience.
-- Review SEO fundamentals, including titles, descriptions, headings, internal links, canonical URLs, sitemap and indexing.
-- Convert suitable images to WebP, optimise image dimensions and review lazy loading.
-- Check loading speed and usability on mobile and desktop.
-- Review security settings, dependencies, form handling and third-party integrations.
-- Complete a final check for broken links, missing assets and accessibility issues.
+### Pending
+- Complete Google Ads conversion tracking using the existing conversion action.
+- Trigger conversion measurement only after confirmed successful Formspree submissions.
+- Ensure Google Ads respects Termly advertising consent independently of Analytics consent.
+- Test the completed integration and synchronise the final code with VS Code/GitHub.
+- Extend the verified GA4 installation to other relevant portfolio pages.
 
-The next working session will begin with Analytics coverage and consent testing, followed by Google Ads. These items remain planned work; today’s update records priorities rather than completed implementation.
+**Status:** Termly + GA4 tested successfully. Google Ads integration pending. No Google Ads tracking code deployed in the final configuration.
