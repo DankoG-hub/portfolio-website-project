@@ -181,27 +181,68 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//THANK YOU PAGE 
-// CONTACT FORM
-const form = document.querySelector(".contact-form");
+// CONTACT FORM — Formspree + Google Ads conversion
+const contactForm = document.querySelector(".contact-form");
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        Accept: "application/json"
+    const submitButton = contactForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    if (submitButton?.disabled) return;
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Formspree submission failed");
       }
-    });
 
-    if (response.ok) {
-      window.location.href = "pages/thank-you.html";
-    } else {
+      const goToThankYou = () => {
+        window.location.href = "/pages/thank-you.html";
+      };
+
+      // Track only after a successful Formspree submission.
+      // Skip Ads tracking if the advertising script was blocked.
+      if (
+        window.adsTrackingEnabled === true &&
+        typeof window.gtag === "function"
+      ) {
+        let redirected = false;
+
+        const finish = () => {
+          if (redirected) return;
+          redirected = true;
+          goToThankYou();
+        };
+
+        gtag("event", "conversion", {
+          send_to: "AW-18293186545/s-IuCIfesMkcEPG_75JE",
+          event_callback: finish,
+          event_timeout: 1500
+        });
+
+        // Fallback if Google doesn't call the callback.
+        setTimeout(finish, 1800);
+      } else {
+        goToThankYou();
+      }
+
+    } catch (error) {
+      console.error("Contact form error:", error);
       alert("Transmission failed. Please try again.");
+
+      if (submitButton) submitButton.disabled = false;
     }
   });
 }
-
