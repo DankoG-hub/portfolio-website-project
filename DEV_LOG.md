@@ -342,3 +342,19 @@ The next working session will begin with Analytics coverage and consent testing,
 - Synchronised website changes between Hostinger and local VS Code project.
 
 **Remaining verification:** Confirm Google Ads conversion event in Tag Assistant, review consent withdrawal behaviour, and complete final cookie scan.
+
+---
+
+## 2026-10-28 — Security and Delivery Planning
+
+### Current focus
+- Review portfolio and client website security before further feature development.
+- Audit GitHub repositories for exposed credentials and sensitive files.
+- Review Google Forms, Apps Script endpoints, and email access controls.
+- Verify third-party integrations, including AI chatbot proxies.
+- Check privacy, consent, and production configuration.
+
+### Next session
+- Inspect repository changes and GitHub security alerts.
+- Prioritise findings by risk and address one issue at a time.
+- Document the checks and changes before deployment.
