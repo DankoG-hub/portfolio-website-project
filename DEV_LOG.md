@@ -358,3 +358,11 @@ The next working session will begin with Analytics coverage and consent testing,
 - Inspect repository changes and GitHub security alerts.
 - Prioritise findings by risk and address one issue at a time.
 - Document the checks and changes before deployment.
+
+### 24 November 2026 — Social Sharing & Brand Identity
+
+- Identified and resolved incorrect social sharing preview imagery.
+- Created a dedicated GIS branded social preview image.
+- Updated Open Graph image metadata.
+- Verified the updated preview using LinkedIn Post Inspector.
+- Preserved existing favicon and organization logo references.
