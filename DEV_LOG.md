@@ -366,3 +366,29 @@ The next working session will begin with Analytics coverage and consent testing,
 - Updated Open Graph image metadata.
 - Verified the updated preview using LinkedIn Post Inspector.
 - Preserved existing favicon and organization logo references.
+
+### ### 2026-11-25 — Studio Visibility & Content Strategy
+
+- Created and published a visual overview of two active
+  client projects: IVANS and Doko Građenje.
+- Established a gradual project showcase strategy.
+- Introduced consistent visual branding for project updates.
+- Defined Instagram as an additional channel for studio
+  visibility and portfolio promotion.
+
+#### Content Strategy
+
+- Publish one main Instagram post per week.
+- Share project updates through studio and personal stories.
+- Introduce projects before publishing detailed showcases.
+- Highlight individual features, design decisions,
+  AI integrations and development processes.
+- Repurpose documented development milestones into
+  public-facing content.
+
+#### Next Steps
+
+- Prepare individual project showcases.
+- Develop a reusable GIS social media template.
+- Connect project content with portfolio case studies.
+- Monitor engagement, website visits and enquiries.
